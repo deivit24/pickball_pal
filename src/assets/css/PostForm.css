@@ -1,0 +1,28 @@
+#PostForm button {
+  background-color: white;
+  color: #3f50b5;
+  font-weight: 700;
+  margin: 10px auto;
+}
+#PostForm button:hover {
+  background-color: #3f50b5;
+  color: white;
+  border: 1px solid white;
+  font-weight: 700;
+  margin: 10px auto;
+}
+
+#PostForm label {
+  color: white;
+}
+#PostForm textarea {
+  color: white;
+}
+
+#PostForm .Mui-focused::before {
+  border-bottom-color: white;
+}
+
+#PostForm .Mui-focused::after {
+  border-bottom-color: white;
+}

@@ -1,0 +1,17 @@
+#Posts .container-fluid {
+  margin-top: -100px;
+  height: 500px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #3f50b5;
+  color: white;
+  margin-bottom: 25px;
+}
+
+#Posts .posts {
+  min-width: 340px;
+  max-width: 500px;
+}

@@ -1,0 +1,26 @@
+#Conversation {
+  max-height: 500px;
+  margin-bottom: 20px;
+  width: 100%;
+  padding: 10px 20px;
+  overflow-y: scroll;
+}
+
+#Conversation img {
+  width: 40px;
+  border-radius: 50%;
+}
+
+#Conversation .message-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#Conversation .message {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+}

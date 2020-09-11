@@ -3,11 +3,24 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-
+import { Provider } from 'react-redux';
+import store from './_helpers/store';
+import { BrowserRouter } from 'react-router-dom';
+import { SnackbarProvider } from 'notistack';
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <Provider store={store}>
+    <BrowserRouter>
+      <SnackbarProvider
+        maxSnack={5}
+        anchorOrigin={{
+          vertical: 'bottom',
+          horizontal: 'left',
+        }}
+      >
+        <App />
+      </SnackbarProvider>
+    </BrowserRouter>
+  </Provider>,
   document.getElementById('root')
 );
 

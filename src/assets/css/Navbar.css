@@ -1,0 +1,9 @@
+button {
+  outline: none !important;
+}
+
+a {
+  color: inherit !important;
+  outline: none !important;
+  text-decoration: none !important;
+}

@@ -1,0 +1,31 @@
+.no-profile {
+  text-align: center;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 8px 2px #afafaf;
+  border-radius: 25px;
+}
+.yes-profile {
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  box-shadow: 0 0 8px 2px #afafaf;
+  border-radius: 25px;
+}
+
+.no-profile h2 {
+  margin-bottom: 25px;
+}
+
+.no-profile img {
+  width: 100%;
+}
+
+p {
+  font-size: 1.2rem;
+}

@@ -1,0 +1,43 @@
+#ProfileBody {
+  margin-top: -100px;
+  background: white;
+  width: 340px;
+  padding-bottom: 25px;
+  border-radius: 25px;
+  box-shadow: 0 0 8px 3px #afafaf;
+}
+
+#ProfileBody img {
+  border-radius: 50%;
+  margin-top: -100px;
+}
+
+#ProfileBody p {
+  font-weight: bold;
+}
+#ProfileInfo {
+  margin-top: 50px;
+
+  max-width: 600px;
+}
+#ProfileInfo .bio {
+  font-weight: 400;
+  margin-bottom: 50px;
+}
+#ProfileInfo h4 {
+  font-weight: bold;
+  color: #3f50b5;
+  margin-top: 25px;
+}
+#ProfileBody .not-active {
+  font-weight: bold;
+  color: grey;
+}
+#ProfileBody .active {
+  font-weight: bold;
+  color: green;
+}
+#ProfileBody h3 {
+  font-weight: bold;
+  color: #3f50b5;
+}

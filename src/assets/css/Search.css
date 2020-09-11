@@ -1,0 +1,36 @@
+#Search {
+  position: relative;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.15);
+  color: white;
+  margin-right: auto;
+  margin-left: auto;
+  width: 320px;
+}
+#Search:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+#Search .searchIcon {
+  padding: 0 10px;
+  height: 100%;
+  position: absolute;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#Search .input-search {
+  padding: 5px 5px 5px 0;
+  color: inherit;
+  padding-left: calc(1em + 70px);
+  transition: all ease-in-out 0.5s;
+  width: 100%;
+}
+
+#Search input::-webkit-outer-spin-button,
+#Search input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
