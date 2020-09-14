@@ -10,6 +10,7 @@ import PrivateRoute from '../components/routing/PrivateRoute';
 import NotFound404 from '../components/routing/NotFound404';
 import CreateProfile from '../components/forms/CreateProfile';
 import EditProfile from '../components/forms/EditProfile';
+import UploadPhoto from '../components/forms/UploadPhoto';
 import AddPlaces from '../components/forms/AddPlaces';
 import Posts from '../components/posts/Posts';
 import Post from '../components/post/Post';
@@ -39,6 +40,9 @@ const Routes = () => {
       </PrivateRoute>
       <PrivateRoute exact path="/edit-profile">
         <EditProfile />
+      </PrivateRoute>
+      <PrivateRoute exact path="/upload-photo">
+        <UploadPhoto />
       </PrivateRoute>
       <PrivateRoute exact path="/add-places">
         <AddPlaces />

@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { addComment } from '../../_actions/post';
-
+import '../../assets/css/CommentForm.css';
 import Input from '@material-ui/core/Input';
 import Button from '@material-ui/core/Button';
 
-const CommentForm = ({ postId }) => {
+const CommentForm = ({ postId, color }) => {
   const dispatch = useDispatch();
   const handleChange = (e) => {
     setText(e.target.value);
@@ -20,7 +20,7 @@ const CommentForm = ({ postId }) => {
     <div id="CommentForm">
       <form action="" autoComplete="off" noValidate>
         <Input
-          className="mr-2"
+          className={`mr-2 ${color}`}
           multiline
           rowsMax={4}
           name="text"

@@ -2,9 +2,9 @@ import React, { useEffect } from 'react';
 import { getCurrentProfile } from '../../_actions/profile';
 import { Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
-
 import Loading from '../layout/Loading';
 import Button from '@material-ui/core/Button';
+import '../../assets/css/DashboardProfile.css';
 
 const DashboardProfile = () => {
   const meProfile = useSelector((store) => store.profile);
@@ -21,12 +21,14 @@ const DashboardProfile = () => {
   if (profile !== null) {
     return (
       <>
-        <div className="yes-profile mb-3">
-          <h3 className="">Your Bio:</h3>
+        <div id="DashboardProfile" className="mb-3">
+          <h4>Bio</h4>
           <p>{profile.bio}</p>
-        </div>
-        <div className="yes-profile mb-3">
-          <h3 className="pb-">Your Info:</h3>
+          <br />
+          <h4>Playing Style</h4>
+          <p>{profile.playing_tyle}</p>
+          <br />
+          <h4>Your Info:</h4>
           <div className="row">
             <div className="col-6">
               <p>
@@ -56,24 +58,20 @@ const DashboardProfile = () => {
                   : 'Not looking to play'}
               </p>
             </div>
-            <div className="col-3">
+            <div className="col-6">
               <p>
                 <i className="fas fa-users"></i> Socials:
               </p>
             </div>
-            <div className="col-3 text-center">
+            <div className="col-6 ">
               <Link to={profile.social.instagram}>
-                <i className="fab fa-instagram fa-2x"></i>
+                <i className="fab fa-instagram fa-2x mr-2"></i>
               </Link>
-            </div>
-            <div className="col-3 text-center">
               <Link to={profile.social.facebook}>
-                <i className="fab fa-facebook fa-2x"></i>
+                <i className="fab fa-facebook fa-2x mr-2"></i>
               </Link>
-            </div>
-            <div className="col-3 text-center">
               <Link to={profile.social.linkedin}>
-                <i className="fab fa-linkedin fa-2x"></i>
+                <i className="fab fa-linkedin fa-2x mr-2"></i>
               </Link>
             </div>
           </div>
@@ -82,18 +80,19 @@ const DashboardProfile = () => {
     );
   } else {
     return (
-      <div className="no-profile">
-        <h2>You haven't created a profile yet. Please add some info </h2>
+      <div className="text-center">
+        <h4>You haven't created a profile yet. Please add some info </h4>
+        <img
+          src="https://media3.giphy.com/media/llUrLQUiwRhFEpqTFi/giphy.gif"
+          alt=""
+        />
+        <br />
         <Link to="/create-profile">
           {' '}
           <Button variant="contained" color="primary">
             Create Profile
           </Button>{' '}
         </Link>
-        <img
-          src="https://media3.giphy.com/media/llUrLQUiwRhFEpqTFi/giphy.gif"
-          alt=""
-        />
       </div>
     );
   }

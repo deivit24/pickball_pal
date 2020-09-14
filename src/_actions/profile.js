@@ -11,6 +11,7 @@ import {
   DELETE_ACCOUNT,
   NEW_CONVERSATION,
   POST_MESSAGES,
+  USER_LOADED,
 } from './types';
 
 const BASE_URL = process.env.REACT_APP_BASE_URL;
@@ -239,6 +240,52 @@ export const addPlaces = (formData, history) => async (dispatch) => {
   }
 };
 
+export const uploadPhoto = (formData, history) => async (dispatch) => {
+  try {
+    const config = {
+      headers: {
+        'Content-Type': 'multipart/form-data',
+      },
+    };
+
+    const res = await axios.put(
+      `${BASE_URL}/api/users/upload`,
+      formData,
+      config
+    );
+    console.log(res.data);
+    dispatch({
+      type: USER_LOADED,
+      payload: res.data,
+    });
+
+    dispatch(setAlert('Photo Updated!', 'success'));
+    history.push('/dashboard');
+  } catch (e) {
+    console.log(e.response);
+    if (e) {
+      dispatch(setAlert('photo uploaded', 'error'));
+    }
+    if (e.response === undefined) {
+      dispatch(setAlert('photo uploaded', 'error'));
+    }
+
+    const errors = e.response.data.msg;
+
+    if (typeof errors === 'string') {
+      dispatch(setAlert(errors, 'error'));
+    }
+    if (errors === undefined) {
+      dispatch(setAlert('Enter a valid location', 'error'));
+    } else {
+      errors.forEach((error) => dispatch(setAlert(error.msg, 'error')));
+    }
+    dispatch({
+      type: PROFILE_ERROR,
+      payload: { msg: e.response.statusText, status: e.response.status },
+    });
+  }
+};
 //DELETE Places
 export const deletePlace = (id) => async (dispatch) => {
   try {

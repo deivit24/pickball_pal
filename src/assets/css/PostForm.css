@@ -1,4 +1,11 @@
-#PostForm button {
+#PostForm {
+  margin-bottom: 25px;
+}
+#PostForm form {
+  width: 360px;
+  margin: 0px auto;
+}
+/* #PostForm button {
   background-color: white;
   color: #3f50b5;
   font-weight: 700;
@@ -10,19 +17,12 @@
   border: 1px solid white;
   font-weight: 700;
   margin: 10px auto;
-}
+} */
 
 #PostForm label {
-  color: white;
+  color: black;
 }
 #PostForm textarea {
-  color: white;
-}
-
-#PostForm .Mui-focused::before {
-  border-bottom-color: white;
-}
-
-#PostForm .Mui-focused::after {
-  border-bottom-color: white;
+  min-width: 270px;
+  max-width: 280px;
 }

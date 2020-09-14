@@ -16,6 +16,14 @@ const DashboardActions = () => {
         </Link>
       </div>
       <div className="col-lg-6 mb-3">
+        <Link to="/upload-photo">
+          <Button fullWidth variant="outlined" color="primary">
+            {' '}
+            <i className="fas fa-upload mr-1"></i> Edit Photo
+          </Button>
+        </Link>
+      </div>
+      <div className="col-lg-12 mb-3">
         <Button
           onClick={() => dispatch(deleteAccount())}
           fullWidth

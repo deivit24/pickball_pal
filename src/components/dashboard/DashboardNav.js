@@ -12,6 +12,7 @@ import { v4 as uuidv4 } from 'uuid';
 import { getCurrentProfile, getMessages } from '../../_actions/profile';
 import DashboardProfile from './DashboardProfile';
 import DashboardPlaces from './DashboardPlaces';
+import DashboardPosts from './DashboardPosts';
 import Conversation from '../messages/Conversation';
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -87,12 +88,14 @@ const DashboardNav = () => {
           onChange={handleChange}
           indicatorColor="primary"
           textColor="primary"
-          variant="fullWidth"
+          variant="scrollable"
+          scrollButtons="auto"
           aria-label="full width tabs example"
         >
           <Tab label="Bio" {...a11yProps(0)} />
           <Tab label="Places" {...a11yProps(1)} />
           <Tab label="Messages" {...a11yProps(2)} />
+          <Tab label="Manage Posts" {...a11yProps(3)} />
         </Tabs>
       </AppBar>
 
@@ -104,6 +107,9 @@ const DashboardNav = () => {
       </TabPanel>
       <TabPanel value={value} index={2}>
         {dispalyMessages}
+      </TabPanel>
+      <TabPanel value={value} index={3}>
+        <DashboardPosts />
       </TabPanel>
     </div>
   );

@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { addLike, removeLike, deletePost } from '../../_actions/post';
 import CommentForm from '../post/CommentForm';
+// import { getProfileById } from '../../_actions/profile';
 import { Link } from 'react-router-dom';
 import Moment from 'react-moment';
 import Icon from '@material-ui/core/Icon';
@@ -18,6 +19,7 @@ const PostCard = ({
     last_name,
     avatar,
     user,
+    location,
     likes,
     comments,
     date,
@@ -25,9 +27,15 @@ const PostCard = ({
 }) => {
   const dispatch = useDispatch();
 
-  function capFirst(str) {
-    return str.charAt(0).toUpperCase() + str.slice(1);
-  }
+  let name =
+    first_name.charAt(0).toUpperCase() +
+    first_name.slice(1) +
+    ' ' +
+    last_name.charAt(0).toUpperCase() +
+    last_name.slice(1);
+  // function capFirst(str) {
+  //   return str.charAt(0).toUpperCase() + str.slice(1);
+  // }
   const auth = useSelector((store) => store.auth);
 
   return (
@@ -43,9 +51,8 @@ const PostCard = ({
               />
             </Link>
             <Link to={`/profile/${user}`}>
-              <h3>
-                {capFirst(first_name)} {capFirst(last_name)}
-              </h3>
+              <h3>{name}</h3>
+              <p>{location}</p>
             </Link>
 
             <h5>
@@ -106,7 +113,7 @@ const PostCard = ({
                     <Icon className="fas fa-trash"></Icon>
                   </Button>
                 )}
-                <CommentForm postId={_id} />
+                <CommentForm postId={_id} color="black" />
               </div>
             </>
           )}

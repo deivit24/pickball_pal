@@ -14,13 +14,9 @@ import TableCell from '@material-ui/core/TableCell';
 import TableContainer from '@material-ui/core/TableContainer';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
+import '../../assets/css/DashboardPlaces.css';
 
 const useStyles = makeStyles({
-  table: {
-    width: '100%',
-    boxShadow: '0 0 8px 2px #afafaf',
-    borderRadius: '25px',
-  },
   tableHead: {
     fontWeight: '700',
   },
@@ -41,11 +37,17 @@ const DashboardPlaces = () => {
 
   if (profile !== null && profile.places.length === 0) {
     return (
-      <div className="yes-profile text-center">
-        <h2 className="mb-3">
+      <div id="DashboardPlaces" className=" text-center">
+        <h4 className="mb-3">
           {' '}
           Add a place to let other users know where you usually play
-        </h2>
+        </h4>
+        <img
+          className="mx-auto"
+          src="https://cliply.co/wp-content/uploads/2019/03/371903340_LOCATION_MARKER_400.gif"
+          alt=""
+        />
+        <br />
         <Link to="/add-places">
           <Button variant="outlined" color="primary">
             {' '}
@@ -57,7 +59,7 @@ const DashboardPlaces = () => {
   }
   if (profile !== null && profile.places.length > 0) {
     return (
-      <TableContainer className={classes.table}>
+      <TableContainer id="DashboardPlaces">
         <h3 className="p-3">
           Your locations:{' '}
           <Link className="float-right" to="/add-places">
@@ -70,12 +72,12 @@ const DashboardPlaces = () => {
         <Table aria-label="simple table">
           <TableHead>
             <TableRow>
-              <TableCell className={classes.tableHead}>Action</TableCell>
-              <TableCell className={classes.tableHead}>Name</TableCell>
-              <TableCell className={classes.tableHead} align="right">
+              <TableCell className="table-head">Action</TableCell>
+              <TableCell className="table-head">Name</TableCell>
+              <TableCell className="table-head" align="right">
                 Location
               </TableCell>
-              <TableCell className={classes.tableHead} align="right">
+              <TableCell className="table-head" align="right">
                 Created
               </TableCell>
             </TableRow>

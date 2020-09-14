@@ -1,0 +1,12 @@
+#DashboardPlaces {
+  width: 100%;
+}
+
+#DashboardPlaces .table-head {
+  font-weight: 700;
+  color: #3f50b5;
+}
+
+#DashboardPlaces img {
+  width: 150px;
+}

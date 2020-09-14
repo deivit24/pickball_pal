@@ -106,7 +106,8 @@ export const login = (email, password) => async (dispatch) => {
 
 // LOGOUT / CLEAR PROFILE
 
-export const logout = () => (dispatch) => {
+export const logout = (history) => (dispatch) => {
   dispatch({ type: CLEAR_PROFILE });
   dispatch({ type: LOGOUT });
+  history.push('/login');
 };

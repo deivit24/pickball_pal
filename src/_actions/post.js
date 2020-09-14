@@ -9,15 +9,33 @@ import {
   GET_POST,
   ADD_COMMENT,
   REMOVE_COMMENT,
+  GET_USER_POSTS,
 } from './types';
 
 const BASE_URL = process.env.REACT_APP_BASE_URL;
 
 export const getPosts = () => async (dispatch) => {
   try {
-    const res = await axios.get(`${BASE_URL}/api/posts`);
+    const res = await axios.get(
+      `${BASE_URL}/api/posts${window.location.search}`
+    );
     dispatch({
       type: GET_POSTS,
+      payload: res.data,
+    });
+  } catch (e) {
+    dispatch({
+      type: POST_ERROR,
+      payload: { msg: e.response.statusText, status: e.response.status },
+    });
+  }
+};
+
+export const getUserPosts = () => async (dispatch) => {
+  try {
+    const res = await axios.get(`${BASE_URL}/api/posts/user`);
+    dispatch({
+      type: GET_USER_POSTS,
       payload: res.data,
     });
   } catch (e) {

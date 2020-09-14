@@ -7,6 +7,7 @@ import {
   ADD_POST,
   ADD_COMMENT,
   REMOVE_COMMENT,
+  GET_USER_POSTS,
 } from '../_actions/types';
 const INIT_STATE = {
   posts: [],
@@ -19,6 +20,7 @@ export default function (state = INIT_STATE, action) {
   const { type, payload } = action;
   switch (type) {
     case GET_POSTS:
+    case GET_USER_POSTS:
       return {
         ...state,
         posts: payload,

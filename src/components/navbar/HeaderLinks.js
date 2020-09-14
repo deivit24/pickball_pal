@@ -3,6 +3,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 //logout action redux
 import { logout } from '../../_actions/auth';
+import { useHistory } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 // @material-ui/core components
 import { makeStyles } from '@material-ui/core/styles';
@@ -19,6 +20,7 @@ import styles from '../../assets/js/headerLinksStyle';
 const useStyles = makeStyles(styles);
 
 export default function HeaderLinks(props) {
+  const history = useHistory();
   const auth = useSelector((store) => store.auth);
   const dispatch = useDispatch();
   const classes = useStyles();
@@ -26,7 +28,7 @@ export default function HeaderLinks(props) {
   const { isAuth, loading } = auth;
   const handleLogout = async (e) => {
     e.preventDefault();
-    dispatch(logout());
+    dispatch(logout(history));
   };
   const authLinks = (
     <>

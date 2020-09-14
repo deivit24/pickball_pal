@@ -1,0 +1,32 @@
+#CommentForm button {
+  background-color: white;
+  color: #3f50b5;
+  font-weight: 700;
+  margin: 10px auto;
+}
+#CommentForm button:hover {
+  background-color: #3f50b5;
+  color: white;
+  border: 1px solid white;
+  font-weight: 700;
+  margin: 10px auto;
+}
+
+#CommentForm label {
+  color: black;
+}
+#CommentForm .black {
+  color: black;
+}
+
+#CommentForm .white {
+  color: white;
+}
+
+#CommentForm .Mui-focused::before {
+  border-bottom-color: white;
+}
+
+#CommentForm .Mui-focused::after {
+  border-bottom-color: white;
+}

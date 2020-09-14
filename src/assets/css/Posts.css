@@ -1,6 +1,6 @@
 #Posts .container-fluid {
   margin-top: -100px;
-  height: 500px;
+  height: 400px;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -8,7 +8,7 @@
   align-items: center;
   background: #3f50b5;
   color: white;
-  margin-bottom: 25px;
+  margin-bottom: 50px;
 }
 
 #Posts .posts {

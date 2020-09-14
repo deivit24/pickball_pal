@@ -26,7 +26,10 @@ const App = () => {
   if (
     location.pathname !== '/dashboard' &&
     location.pathname !== '/login' &&
-    location.pathname !== '/register'
+    location.pathname !== '/register' &&
+    location.pathname !== '/edit-profile' &&
+    location.pathname !== '/upload-photo' &&
+    location.pathname !== '/create-profile'
   ) {
     pathname = 'transparent';
   } else {

@@ -10,6 +10,7 @@
 #ProfileBody img {
   border-radius: 50%;
   margin-top: -100px;
+  width: 100%;
 }
 
 #ProfileBody p {

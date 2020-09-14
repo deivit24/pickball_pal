@@ -36,7 +36,7 @@ const PostForm = () => {
           onClick={handleSubmit}
           size="small"
           variant="contained"
-          color="default"
+          color="primary"
         >
           Post
         </Button>

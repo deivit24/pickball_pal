@@ -23,7 +23,8 @@ const Post = () => {
   ) : (
     <div id="Post" className="container-fluid">
       <div className="comment-header">
-        <CommentForm postId={post._id} />
+        <h1>Leave a comment</h1>
+        <CommentForm postId={post._id} color="white" />
       </div>
       <div className="post-card">
         <PostCard post={post} showActions={false} />{' '}
