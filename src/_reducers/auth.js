@@ -16,6 +16,7 @@ const INIT_STATE = {
   user: null,
 };
 
+//Auth reducer
 export default function (state = INIT_STATE, action) {
   const { type, payload } = action;
   switch (type) {

@@ -17,6 +17,7 @@ const INIT_STATE = {
   error: {},
 };
 
+//Profile Reducer
 export default function (state = INIT_STATE, action) {
   const { type, payload } = action;
 

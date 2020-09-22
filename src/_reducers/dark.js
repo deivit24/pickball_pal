@@ -1,3 +1,6 @@
+/**
+ * I have not implemented this yet but I will do in the future
+ */
 import { DARK_ON, DARK_OFF } from '../_actions/types';
 
 const INITIAL_STATE = { dark: false };

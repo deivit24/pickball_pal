@@ -16,6 +16,7 @@ const INIT_STATE = {
   error: {},
 };
 
+//Post Reducer
 export default function (state = INIT_STATE, action) {
   const { type, payload } = action;
   switch (type) {
