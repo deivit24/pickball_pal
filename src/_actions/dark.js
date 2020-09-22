@@ -1,3 +1,7 @@
+/**
+ * I have not implemented this yet but I will do in the future
+ */
+
 import { DARK_ON, DARK_OFF } from './types';
 
 export const darkModeOn = () => {

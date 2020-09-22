@@ -1,11 +1,14 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import { Redirect, useHistory } from 'react-router-dom';
-
+import { Redirect, useHistory, Link } from 'react-router-dom';
 import HomeCards from './HomeCards';
-
+import HomeMission from './HomeMission';
+import HomeFooter from './HomeFooter';
 // @material-ui/core components
+import Button from '@material-ui/core/Button';
 import Search from '../forms/Search';
+
+import '../../assets/css/Home.css';
 
 const Home = () => {
   let history = useHistory();
@@ -26,14 +29,26 @@ const Home = () => {
         <div className="container">
           <div className="row">
             <div className="col-12 text-center">
-              <h1>Pickleball Pal</h1>
-              <h3 className="mb-3">Find local players near you</h3>
+              <h1>Welcome to Pickleball Pal</h1>
+              <h3 className="mb-3">Find local pickleball players near you</h3>
               <Search searchFor={handleSearch} />
+              <Link className="mr-3" to="/register">
+                <Button variant="contained" color="primary">
+                  Register
+                </Button>
+              </Link>
+              <Link to="/profiles">
+                <Button variant="contained" color="primary">
+                  View Players
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
       </div>
       <HomeCards />
+      <HomeMission />
+      <HomeFooter />
     </>
   );
 };

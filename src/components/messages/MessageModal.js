@@ -16,7 +16,7 @@ const useStyles = makeStyles((theme) => ({
   },
   paper: {
     backgroundColor: theme.palette.background.paper,
-    border: '2px solid #000',
+    border: '1px solid #fff',
     boxShadow: theme.shadows[5],
     padding: theme.spacing(2, 4, 3),
   },
@@ -93,7 +93,7 @@ const MessageModal = ({ messageMe, display, name, id, handleSubmit }) => {
         <Fade in={open}>
           <div className={classes.paper}>
             <h2 id="spring-modal-title">{name}</h2>
-            <MessageForm id={id} handleClose={handleClose} />
+            <MessageForm replyId={id} handleClose={handleClose} />
           </div>
         </Fade>
       </Modal>

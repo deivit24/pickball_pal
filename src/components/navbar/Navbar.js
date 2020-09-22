@@ -65,7 +65,7 @@ export default function Navbar(props) {
   });
   const brandComponent = (
     <Link to="/">
-      <Button className={classes.title}>{brand}</Button>{' '}
+      <img id="Logo" src={brand} alt="" />
     </Link>
   );
   return (

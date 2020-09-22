@@ -1,0 +1,29 @@
+#HomeCards {
+  margin-bottom: 150px;
+  text-align: center;
+}
+
+#HomeCards h1 {
+  font-weight: 700;
+  margin-bottom: 100px;
+}
+#HomeCards .grid .paper {
+  text-align: center;
+  padding: 10px;
+  margin-bottom: 25px;
+}
+#HomeCards .grid .paper img {
+  width: 64px;
+  margin: 25px 0px;
+}
+
+#HomeCards .grid .paper h4 {
+  font-weight: 700;
+  color: #0077ff;
+  margin-bottom: 25px;
+}
+
+#HomeCards .grid .paper p {
+  color: #333;
+  padding: 0 20px;
+}

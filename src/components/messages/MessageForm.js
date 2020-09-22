@@ -4,7 +4,7 @@ import { postMessage, getMessages } from '../../_actions/profile';
 import Input from '@material-ui/core/Input';
 import Button from '@material-ui/core/Button';
 
-const MessageForm = ({ id, handleClose }) => {
+const MessageForm = ({ replyId, handleClose }) => {
   const dispatch = useDispatch();
   const handleChange = (e) => {
     setMessage(e.target.value);
@@ -12,7 +12,7 @@ const MessageForm = ({ id, handleClose }) => {
   const [message, setMessage] = useState('');
   const handleSubmit = (e) => {
     e.preventDefault();
-    dispatch(postMessage(id, { message }));
+    dispatch(postMessage(replyId, { message }));
     setMessage('');
     handleClose();
   };
@@ -23,7 +23,8 @@ const MessageForm = ({ id, handleClose }) => {
           id="outlined-multiline-flexible"
           className="mr-2"
           multiline
-          rowsMax={4}
+          fullWidth
+          rows={4}
           name="message"
           value={message}
           onChange={handleChange}

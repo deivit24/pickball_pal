@@ -1,0 +1,35 @@
+#Home {
+  margin-top: -100px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: linear-gradient(
+      rgba(0, 0, 0, 0.8) 30%,
+      rgba(0, 0, 0, 0.6) 70%,
+      #3f50b5
+    ),
+    url(../img/home.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 100px;
+}
+#Home h1 {
+  color: white;
+  font-size: 4rem;
+  font-weight: 700;
+}
+#Home h3 {
+  color: white;
+
+  font-weight: 700;
+}
+
+#Home a {
+  text-decoration: none;
+}
+/* #Home button {
+  background: #3f50b5;
+} */

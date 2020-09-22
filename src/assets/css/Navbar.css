@@ -7,3 +7,7 @@ a {
   outline: none !important;
   text-decoration: none !important;
 }
+
+#Logo {
+  width: 250px;
+}

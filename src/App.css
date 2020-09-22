@@ -1,23 +1,4 @@
 .App {
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Oswald', sans-serif;
   margin-top: 100px;
-}
-
-#Home {
-  margin-top: -100px;
-  height: 500px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background: #3f50b5;
-}
-#Home h1 {
-  color: white;
-  font-size: 4rem;
-  font-weight: 700;
-}
-#Home h3 {
-  color: white;
-
-  font-weight: 700;
 }

@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { makeStyles } from '@material-ui/core/styles';
 import { useHistory } from 'react-router-dom';
-import { getMessages } from '../../_actions/profile';
+import { getMessages, getCurrentProfile } from '../../_actions/profile';
 import Accordion from '@material-ui/core/Accordion';
 import AccordionSummary from '@material-ui/core/AccordionSummary';
 import AccordionDetails from '@material-ui/core/AccordionDetails';
@@ -51,6 +51,7 @@ const Conversation = ({ conversation }) => {
     console.log(replyId);
     // eslint-disable-next-line no-restricted-globals
     // location.reload();
+
     history.push('/');
   };
 
@@ -63,27 +64,32 @@ const Conversation = ({ conversation }) => {
       >
         <Typography className={classes.heading}> {messageName}</Typography>
       </AccordionSummary>
-      <AccordionDetails>
+      <AccordionDetails id="Details">
         <div id="Conversation">
-          {conversation.map((conv) => (
-            <div key={conv._id} className="row">
-              <div className=" col-8 message">
-                <p>{conv.message}</p>
-                <Moment to={conv.date_sent}></Moment>
+          <div className="conversation-box">
+            {conversation.map((conv) => (
+              <div key={conv._id} className="row">
+                <div className=" col-8 message">
+                  <p>{conv.message}</p>
+                  <Moment to={conv.date_sent}></Moment>
+                </div>
+                <div
+                  className={`col-4 ${
+                    user._id === conv.sender_id ? 'order-first' : ''
+                  } message-box`}
+                >
+                  <img src={conv.avatar} alt="avatar" /> <br />
+                  <p className="text-muted">
+                    {conv.first_name} {conv.last_name}
+                  </p>
+                </div>
               </div>
-              <div
-                className={`col-4 ${
-                  user._id === conv.sender_id ? 'order-first' : ''
-                } message-box`}
-              >
-                <img src={conv.avatar} alt="avatar" /> <br />
-                <p className="text-muted">
-                  {conv.first_name} {conv.last_name}
-                </p>
-              </div>
-            </div>
-          ))}
-          <MessageForm id={replyId} handleClose={handleClose} />
+            ))}
+            <div className="anchor"></div>
+          </div>
+          <div className="message-form">
+            <MessageForm replyId={replyId} handleClose={handleClose} />
+          </div>
         </div>
       </AccordionDetails>
     </Accordion>

@@ -80,6 +80,8 @@ export const newConversation = (id) => async (dispatch) => {
 
 export const postMessage = (id, formData) => async (dispatch) => {
   try {
+    // const response = await axios.get(`${BASE_URL}/api/profile/messages`);
+    // const profile = await axios.get(`${BASE_URL}/api/profile/me`);
     const res = await axios.post(`${BASE_URL}/api/profile/${id}`, formData);
 
     dispatch({

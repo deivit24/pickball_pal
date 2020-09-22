@@ -4,7 +4,8 @@ import Navbar from './components/navbar/Navbar';
 import { useDispatch } from 'react-redux';
 import HeaderLinks from './components/navbar/HeaderLinks';
 import './App.css';
-
+import TransLogo from './assets/img/translogo.png';
+import DarkLogo from './assets/img/darklogo.png';
 import AlertMsg from './components/layout/AlertMsg';
 import Routes from './routes/Routes';
 import { loadUser } from './_actions/auth';
@@ -23,6 +24,7 @@ const App = () => {
   console.dir(id);
 
   let pathname;
+
   if (
     location.pathname !== '/dashboard' &&
     location.pathname !== '/login' &&
@@ -40,7 +42,7 @@ const App = () => {
     <div className="App">
       <Navbar
         color={pathname}
-        brand="Pickball Pal"
+        brand={TransLogo}
         rightLinks={<HeaderLinks />}
         fixed
         changeColorOnScroll={{
