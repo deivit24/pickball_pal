@@ -14,7 +14,8 @@ import { setAlert } from './alert';
 
 import setAuthToken from '../_helpers/setAuthToken';
 const BASE_URL = process.env.REACT_APP_BASE_URL;
-//Load User
+
+//Load User and set token in local storage
 
 export const loadUser = () => async (dispatch) => {
   if (localStorage.token) {

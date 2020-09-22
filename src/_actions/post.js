@@ -3,10 +3,10 @@ import { setAlert } from './alert';
 import {
   GET_POSTS,
   POST_ERROR,
-  UPDATE_LIKES,
-  DELETE_POST,
-  ADD_POST,
   GET_POST,
+  ADD_POST,
+  DELETE_POST,
+  UPDATE_LIKES,
   ADD_COMMENT,
   REMOVE_COMMENT,
   GET_USER_POSTS,
@@ -14,6 +14,7 @@ import {
 
 const BASE_URL = process.env.REACT_APP_BASE_URL;
 
+//Get all posts and search query if needed
 export const getPosts = () => async (dispatch) => {
   try {
     const res = await axios.get(
@@ -31,6 +32,7 @@ export const getPosts = () => async (dispatch) => {
   }
 };
 
+// Get current Users Posts
 export const getUserPosts = () => async (dispatch) => {
   try {
     const res = await axios.get(`${BASE_URL}/api/posts/user`);
@@ -46,6 +48,7 @@ export const getUserPosts = () => async (dispatch) => {
   }
 };
 
+//Add like to a post
 export const addLike = (id) => async (dispatch) => {
   try {
     const res = await axios.patch(`${BASE_URL}/api/posts/like/${id}`);
@@ -61,6 +64,7 @@ export const addLike = (id) => async (dispatch) => {
   }
 };
 
+//Remove like from a post
 export const removeLike = (id) => async (dispatch) => {
   try {
     const res = await axios.patch(`${BASE_URL}/api/posts/unlike/${id}`);
@@ -76,22 +80,7 @@ export const removeLike = (id) => async (dispatch) => {
   }
 };
 
-export const deletePost = (id) => async (dispatch) => {
-  try {
-    await axios.delete(`${BASE_URL}/api/posts/${id}`);
-    dispatch({
-      type: DELETE_POST,
-      payload: id,
-    });
-    dispatch(setAlert('Post Removed', 'success'));
-  } catch (e) {
-    dispatch({
-      type: POST_ERROR,
-      payload: { msg: e.response.statusText, status: e.response.status },
-    });
-  }
-};
-
+//add Post
 export const addPost = (formData) => async (dispatch) => {
   try {
     const res = await axios.post(`${BASE_URL}/api/posts`, formData);
@@ -100,6 +89,23 @@ export const addPost = (formData) => async (dispatch) => {
       payload: res.data,
     });
     dispatch(setAlert('Post Created', 'success'));
+  } catch (e) {
+    dispatch({
+      type: POST_ERROR,
+      payload: { msg: e.response.statusText, status: e.response.status },
+    });
+  }
+};
+
+//Delete post
+export const deletePost = (id) => async (dispatch) => {
+  try {
+    await axios.delete(`${BASE_URL}/api/posts/${id}`);
+    dispatch({
+      type: DELETE_POST,
+      payload: id,
+    });
+    dispatch(setAlert('Post Removed', 'success'));
   } catch (e) {
     dispatch({
       type: POST_ERROR,
@@ -124,8 +130,7 @@ export const getPost = (id) => async (dispatch) => {
   }
 };
 
-//Add comment
-
+//Add comment to a specific post
 export const addComment = (postId, formData) => async (dispatch) => {
   try {
     const res = await axios.post(
@@ -146,7 +151,6 @@ export const addComment = (postId, formData) => async (dispatch) => {
 };
 
 //Remove Comment
-
 export const deleteComment = (postId, commentId) => async (dispatch) => {
   try {
     await axios.delete(`${BASE_URL}/api/posts/comment/${postId}/${commentId}`);

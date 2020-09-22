@@ -16,6 +16,7 @@ import {
 
 const BASE_URL = process.env.REACT_APP_BASE_URL;
 
+//Get current user profile
 export const getCurrentProfile = () => async (dispatch) => {
   try {
     const res = await axios.get(`${BASE_URL}/api/profile/me`);
@@ -33,6 +34,7 @@ export const getCurrentProfile = () => async (dispatch) => {
   }
 };
 
+//get messages from current users
 export const getMessages = () => async (dispatch) => {
   try {
     const res = await axios.get(`${BASE_URL}/api/profile/messages`);
@@ -50,8 +52,7 @@ export const getMessages = () => async (dispatch) => {
   }
 };
 
-//New Conversation
-
+//Start a new conversation
 export const newConversation = (id) => async (dispatch) => {
   try {
     const res = await axios.post(
@@ -78,10 +79,9 @@ export const newConversation = (id) => async (dispatch) => {
   }
 };
 
+//Post a message
 export const postMessage = (id, formData) => async (dispatch) => {
   try {
-    // const response = await axios.get(`${BASE_URL}/api/profile/messages`);
-    // const profile = await axios.get(`${BASE_URL}/api/profile/me`);
     const res = await axios.post(`${BASE_URL}/api/profile/${id}`, formData);
 
     dispatch({
@@ -159,7 +159,6 @@ export const getProfileById = (userId) => async (dispatch) => {
 };
 
 // Create or Update Profile
-
 export const createProfile = (formData, history, edit = false) => async (
   dispatch
 ) => {
@@ -242,6 +241,7 @@ export const addPlaces = (formData, history) => async (dispatch) => {
   }
 };
 
+//Upload a profile picture
 export const uploadPhoto = (formData, history) => async (dispatch) => {
   try {
     const config = {
@@ -288,6 +288,7 @@ export const uploadPhoto = (formData, history) => async (dispatch) => {
     });
   }
 };
+
 //DELETE Places
 export const deletePlace = (id) => async (dispatch) => {
   try {
@@ -305,8 +306,7 @@ export const deletePlace = (id) => async (dispatch) => {
   }
 };
 
-//DELETE Account & Profile
-
+//DELETE Account & Profile, Messages and Posts
 export const deleteAccount = () => async (dispatch) => {
   try {
     await axios.delete(`${BASE_URL}/api/profile`);
