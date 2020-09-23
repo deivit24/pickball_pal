@@ -1,11 +1,10 @@
 import React, { useEffect } from 'react';
-import { useLocation, useParams } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import Navbar from './components/navbar/Navbar';
 import { useDispatch } from 'react-redux';
 import HeaderLinks from './components/navbar/HeaderLinks';
 import './App.css';
-import TransLogo from './assets/img/translogo.png';
-import DarkLogo from './assets/img/darklogo.png';
+import logo from './assets/img/logo.png';
 import AlertMsg from './components/layout/AlertMsg';
 import Routes from './routes/Routes';
 import { loadUser } from './_actions/auth';
@@ -15,13 +14,11 @@ if (localStorage.token) {
   setAuthToken(localStorage.token);
 }
 const App = () => {
-  const { id } = useParams();
   let location = useLocation();
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(loadUser());
   }, [dispatch]);
-  console.dir(id);
 
   let pathname;
 
@@ -31,7 +28,8 @@ const App = () => {
     location.pathname !== '/register' &&
     location.pathname !== '/edit-profile' &&
     location.pathname !== '/upload-photo' &&
-    location.pathname !== '/create-profile'
+    location.pathname !== '/create-profile' &&
+    location.pathname !== '/add-places'
   ) {
     pathname = 'transparent';
   } else {
@@ -42,7 +40,7 @@ const App = () => {
     <div className="App">
       <Navbar
         color={pathname}
-        brand={TransLogo}
+        brand={logo}
         rightLinks={<HeaderLinks />}
         fixed
         changeColorOnScroll={{

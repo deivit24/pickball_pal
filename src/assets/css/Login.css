@@ -1,8 +1,19 @@
-#form-box {
+#Login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#Login .form-box {
   max-width: 360px;
   padding: 20px;
   margin-top: 20%;
   box-shadow: 0 0 25px 3px #afafaf;
   border-radius: 25px;
   z-index: 2;
+}
+#Login .form-box .text-field {
+  margin-left: 0;
+  margin-right: 0;
+  width: 100%;
 }
