@@ -1,9 +1,8 @@
+// React
 import React from 'react';
-
-import Card from '@material-ui/core/Card';
-import CardMedia from '@material-ui/core/CardMedia';
-
-import CardContent from '@material-ui/core/CardContent';
+// Material UI
+import { Card, CardMedia, CardContent } from '@material-ui/core';
+// Dashboard Card CSS
 import '../../assets/css/DashboardCard.css';
 
 const DashboardCard = ({ name, avatar }) => {

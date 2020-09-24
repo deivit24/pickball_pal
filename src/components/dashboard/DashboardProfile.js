@@ -1,9 +1,17 @@
+// React
 import React, { useEffect } from 'react';
-import { getCurrentProfile } from '../../_actions/profile';
-import { Link } from 'react-router-dom';
+// Redux
 import { useSelector, useDispatch } from 'react-redux';
+// React Router DOM
+import { Link } from 'react-router-dom';
+// Get Current Profile action
+import { getCurrentProfile } from '../../_actions/profile';
+// Loading Component
 import Loading from '../layout/Loading';
-import Button from '@material-ui/core/Button';
+// Material UI Button
+import { Button } from '@material-ui/core';
+import Profile from '../../assets/img/person.jpg';
+// Dashboard Profile CSS
 import '../../assets/css/DashboardProfile.css';
 
 const DashboardProfile = () => {
@@ -82,10 +90,7 @@ const DashboardProfile = () => {
     return (
       <div className="text-center">
         <h4>You haven't created a profile yet. Please add some info </h4>
-        <img
-          src="https://media3.giphy.com/media/llUrLQUiwRhFEpqTFi/giphy.gif"
-          alt=""
-        />
+        <img className="text-center m-5" src={Profile} alt="" />
         <br />
         <Link to="/create-profile">
           {' '}

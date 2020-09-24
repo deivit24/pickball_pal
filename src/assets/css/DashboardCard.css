@@ -19,3 +19,36 @@
   background: #f4f4f4;
   z-index: -1;
 }
+
+@media only screen and (max-width: 600px) {
+  #DashboardCard {
+    text-align: center;
+    display: flex;
+    width: 100%;
+    border: none;
+    box-shadow: 0 0 3px 1px #afafaf;
+    border-radius: 10px;
+    margin-top: 0px;
+    padding-top: 0px;
+    margin-bottom: 10px;
+  }
+
+  #DashboardCard .img {
+    width: 30%;
+    margin: 0px;
+    border-radius: 0%;
+    z-index: 1;
+  }
+
+  #DashboardCard .card-content {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    padding: 0 10px;
+    margin: 0 auto;
+    background: #fff;
+    z-index: 2;
+  }
+}

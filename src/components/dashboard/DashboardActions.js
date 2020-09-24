@@ -1,10 +1,38 @@
+// React
 import React from 'react';
+// Redux
 import { useDispatch } from 'react-redux';
+// Delete Account Action
 import { deleteAccount } from '../../_actions/profile';
+import { setAlert } from '../../_actions/alert';
+// React Router Dom
 import { Link } from 'react-router-dom';
 import Button from '@material-ui/core/Button';
+// Confirm Alert
+import { confirmAlert } from 'react-confirm-alert'; // Import
+import 'react-confirm-alert/src/react-confirm-alert.css'; // Import css
+
 const DashboardActions = () => {
   const dispatch = useDispatch();
+
+  const handleDelete = (e) => {
+    e.preventDefault();
+
+    confirmAlert({
+      title: 'Confirm to Delete',
+      message: 'Are you sure you want to delete account?',
+      buttons: [
+        {
+          label: 'Yes',
+          onClick: () => dispatch(deleteAccount()),
+        },
+        {
+          label: 'No',
+          onClick: () => dispatch(setAlert('Good Choice', 'info')),
+        },
+      ],
+    });
+  };
   return (
     <div className="row">
       <div className="col-lg-6 mb-3">
@@ -25,7 +53,7 @@ const DashboardActions = () => {
       </div>
       <div className="col-lg-12 mb-3">
         <Button
-          onClick={() => dispatch(deleteAccount())}
+          onClick={handleDelete}
           fullWidth
           variant="outlined"
           color="secondary"

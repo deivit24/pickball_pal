@@ -1,6 +1,10 @@
 #DashboardPlaces {
   width: 100%;
 }
+#DashboardPlaces .title {
+  color: #3f50b5;
+  font-weight: 700;
+}
 
 #DashboardPlaces .table-head {
   font-weight: 700;
@@ -9,4 +13,12 @@
 
 #DashboardPlaces img {
   width: 150px;
+}
+
+@media only screen and (max-width: 600px) {
+  #DashboardPlaces .title {
+    color: #3f50b5;
+    font-size: 1rem;
+    font-weight: 700;
+  }
 }

@@ -1,12 +1,13 @@
-/* eslint-disable no-undef */
+// React
 import React, { useEffect } from 'react';
+// Redux
 import { useSelector, useDispatch } from 'react-redux';
-
+// Get users posts
 import { getUserPosts } from '../../_actions/post';
+// Loading
 import Loading from '../layout/Loading';
+// PostCard Component
 import PostCard from '../posts/PostCard';
-
-import '../../assets/css/Dashboard.css';
 
 const DashboardPosts = () => {
   const post = useSelector((store) => store.post);
@@ -33,7 +34,7 @@ const DashboardPosts = () => {
   } else {
     result = (
       <>
-        <div id="DashboardPosts" className="container mt-5">
+        <div id="DashboardPosts" className="container mt-3">
           {posts.map((post) => (
             <PostCard key={post._id} post={post} />
           ))}

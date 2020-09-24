@@ -1,19 +1,26 @@
+// React
 import React, { useEffect, useState } from 'react';
+//Prop Types
 import PropTypes from 'prop-types';
-// import SwipeableViews from 'react-swipeable-views';
-import { makeStyles } from '@material-ui/core/styles';
-import AppBar from '@material-ui/core/AppBar';
-import Tabs from '@material-ui/core/Tabs';
-import Tab from '@material-ui/core/Tab';
-import Typography from '@material-ui/core/Typography';
-import Box from '@material-ui/core/Box';
+//Redux
 import { useSelector, useDispatch } from 'react-redux';
-import { v4 as uuidv4 } from 'uuid';
-import { getCurrentProfile, getMessages } from '../../_actions/profile';
+// Dashboard and Coversation components
 import DashboardProfile from './DashboardProfile';
 import DashboardPlaces from './DashboardPlaces';
 import DashboardPosts from './DashboardPosts';
 import Conversation from '../messages/Conversation';
+import { makeStyles } from '@material-ui/core/styles';
+/*
+This is a componente straight from 
+Material UI not much has changed
+*/
+import { AppBar, Tabs, Tab, Typography, Box } from '@material-ui/core';
+// UUID
+import { v4 as uuidv4 } from 'uuid';
+// Get current profile and Get messages action
+import { getCurrentProfile, getMessages } from '../../_actions/profile';
+
+import '../../assets/css/DashboardNav.css';
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
 
@@ -44,6 +51,7 @@ function a11yProps(index) {
   };
 }
 
+//Leaving the useStyles here
 const useStyles = makeStyles((theme) => ({
   root: {
     backgroundColor: theme.palette.background.paper,
@@ -52,7 +60,6 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const DashboardNav = () => {
-  const auth = useSelector((store) => store.auth);
   const meProfile = useSelector((store) => store.profile);
   const dispatch = useDispatch();
   const { messages } = meProfile;

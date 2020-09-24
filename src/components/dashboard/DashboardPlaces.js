@@ -1,28 +1,31 @@
+// React
 import React, { useEffect } from 'react';
-import { getCurrentProfile, deletePlace } from '../../_actions/profile';
+// Redux
 import { useSelector, useDispatch } from 'react-redux';
+// React Router DOM
 import { Link } from 'react-router-dom';
+// Get Current profile and delete place action
+import { getCurrentProfile, deletePlace } from '../../_actions/profile';
+// Moment
 import Moment from 'react-moment';
+// Loading component
 import Loading from '../layout/Loading';
-import { makeStyles } from '@material-ui/core/styles';
-import IconButton from '@material-ui/core/IconButton';
+
+import {
+  IconButton,
+  Button,
+  Table,
+  TableBody,
+  TableCell,
+  TableContainer,
+  TableHead,
+  TableRow,
+} from '@material-ui/core';
 import DeleteIcon from '@material-ui/icons/Delete';
-import Button from '@material-ui/core/Button';
-import Table from '@material-ui/core/Table';
-import TableBody from '@material-ui/core/TableBody';
-import TableCell from '@material-ui/core/TableCell';
-import TableContainer from '@material-ui/core/TableContainer';
-import TableHead from '@material-ui/core/TableHead';
-import TableRow from '@material-ui/core/TableRow';
+
 import '../../assets/css/DashboardPlaces.css';
 
-const useStyles = makeStyles({
-  tableHead: {
-    fontWeight: '700',
-  },
-});
 const DashboardPlaces = () => {
-  const classes = useStyles();
   const meProfile = useSelector((store) => store.profile);
   const dispatch = useDispatch();
   const { profile, loading } = meProfile;
@@ -60,15 +63,15 @@ const DashboardPlaces = () => {
   if (profile !== null && profile.places.length > 0) {
     return (
       <TableContainer id="DashboardPlaces">
-        <h3 className="p-3">
-          Your locations:{' '}
+        <h4>
+          <span className="title">Your Places:</span>
           <Link className="float-right" to="/add-places">
             <Button variant="outlined" color="primary">
               {' '}
               <i className="fas fa-map-marker-alt mr-2"></i> Add Places
             </Button>
           </Link>
-        </h3>
+        </h4>
         <Table aria-label="simple table">
           <TableHead>
             <TableRow>
