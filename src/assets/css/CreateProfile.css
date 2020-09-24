@@ -1,4 +1,10 @@
-#form-box-create {
+#CreateProfile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#CreateProfile .form-box-create {
   width: 100%;
   padding: 20px;
   margin-top: 10%;
@@ -7,7 +13,7 @@
   z-index: 2;
 }
 
-#form-box-create .form-title {
+#CreateProfile .form-box-create .form-title {
   background: #3f50b5;
   color: white;
   text-align: center;
@@ -19,13 +25,13 @@
   z-index: 20;
 }
 
-#form-box-create .social-button {
+#CreateProfile .form-box-create .social-button {
   margin-top: 20px;
   margin-right: 10px;
 }
-#form-box-create .submit-button {
+#CreateProfile .form-box-create .submit-button {
   float: left !important;
 }
-#form-box-create p {
+#CreateProfile .form-box-create p {
   margin-top: 20px;
 }

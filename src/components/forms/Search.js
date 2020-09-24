@@ -1,22 +1,23 @@
-import React, { useState } from 'react';
+// React\
+import React from 'react';
+// Use State for location
 import { useQueryState } from 'react-router-use-location-state';
-import { makeStyles } from '@material-ui/core/styles';
-import TextField from '@material-ui/core/TextField';
-import InputBase from '@material-ui/core/InputBase';
+// Material UI
+import { InputBase } from '@material-ui/core';
 import SearchIcon from '@material-ui/icons/Search';
-import Button from '@material-ui/core/Button';
+// Search UI
 import '../../assets/css/Search.css';
 
 const Search = ({ searchFor }) => {
   const [search, setSearch] = useQueryState('search', '');
 
-  const handleSubmit = (evt) => {
-    evt.preventDefault();
+  const handleSubmit = (e) => {
+    e.preventDefault();
     searchFor(search);
   };
 
-  const handleChange = (evt) => {
-    setSearch(evt.target.value);
+  const handleChange = (e) => {
+    setSearch(e.target.value);
   };
 
   return (
