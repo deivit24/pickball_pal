@@ -1,8 +1,11 @@
+// React
 import React, { useState } from 'react';
+// Redux
 import { useDispatch } from 'react-redux';
-import { postMessage, getMessages } from '../../_actions/profile';
-import Input from '@material-ui/core/Input';
-import Button from '@material-ui/core/Button';
+// Post Message Action
+import { postMessage } from '../../_actions/profile';
+// Material UI Components
+import { Input, Button } from '@material-ui/core';
 
 const MessageForm = ({ replyId, handleClose }) => {
   const dispatch = useDispatch();

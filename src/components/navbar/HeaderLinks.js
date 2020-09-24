@@ -1,25 +1,23 @@
+// React
 import React from 'react';
-// react components for routing our app without refresh
-import { Link } from 'react-router-dom';
-//logout action redux
-import { logout } from '../../_actions/auth';
-import { useHistory } from 'react-router-dom';
+// Redux
 import { useSelector, useDispatch } from 'react-redux';
+// React Router DOM
+import { Link, useHistory } from 'react-router-dom';
+// Logout action
+import { logout } from '../../_actions/auth';
+
 // @material-ui/core components
 import { makeStyles } from '@material-ui/core/styles';
-import List from '@material-ui/core/List';
-import ListItem from '@material-ui/core/ListItem';
-
-// @material-ui/icons
-
-// core components
+import { List, ListItem } from '@material-ui/core';
 
 import Button from './Button';
+// Custom Styles
 import styles from '../../assets/js/headerLinksStyle';
 
 const useStyles = makeStyles(styles);
 
-export default function HeaderLinks(props) {
+const HeaderLinks = (props) => {
   const history = useHistory();
   const auth = useSelector((store) => store.auth);
   const dispatch = useDispatch();
@@ -88,4 +86,6 @@ export default function HeaderLinks(props) {
       {!loading && <> {isAuth ? authLinks : guestLinks} </>}
     </List>
   );
-}
+};
+
+export default HeaderLinks;

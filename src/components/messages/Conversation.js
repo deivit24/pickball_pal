@@ -1,35 +1,31 @@
-import React, { useEffect } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import { makeStyles } from '@material-ui/core/styles';
+// React
+import React from 'react';
+// Redux
+import { useSelector } from 'react-redux';
+// React Router DOM
 import { useHistory } from 'react-router-dom';
-import { getMessages, getCurrentProfile } from '../../_actions/profile';
-import Accordion from '@material-ui/core/Accordion';
-import AccordionSummary from '@material-ui/core/AccordionSummary';
-import AccordionDetails from '@material-ui/core/AccordionDetails';
-import Typography from '@material-ui/core/Typography';
+// Material UI Components
+import {
+  Accordion,
+  AccordionSummary,
+  AccordionDetails,
+  Typography,
+} from '@material-ui/core';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+// Message Form Component
 import MessageForm from '../messages/MessageForm';
+// Loading
 import Loading from '../layout/Loading';
+// Moment js
 import Moment from 'react-moment';
+// Conversation CSS
 import '../../assets/css/Conversation.css';
-// import { getMessages } from '../../_actions/profile';
-
-const useStyles = makeStyles((theme) => ({
-  root: {
-    width: '100%',
-  },
-  heading: {
-    fontSize: theme.typography.pxToRem(15),
-    fontWeight: theme.typography.fontWeightRegular,
-  },
-}));
 
 const Conversation = ({ conversation }) => {
   let history = useHistory();
-  const classes = useStyles();
   const auth = useSelector((state) => state.auth);
   const { user } = auth;
-  const dispatch = useDispatch();
+
   if (user === null) {
     return <Loading type="spin" color="#3f50b5" />;
   }
@@ -47,11 +43,7 @@ const Conversation = ({ conversation }) => {
   }
 
   const handleClose = () => {
-    console.log('it worked');
-    console.log(replyId);
-    // eslint-disable-next-line no-restricted-globals
-    // location.reload();
-
+    // For somereason I can only get htis to work when I pushed to the dashboard.Will work on this for later versions
     history.push('/');
   };
 
@@ -62,7 +54,7 @@ const Conversation = ({ conversation }) => {
         aria-controls="panel1a-content"
         id="panel1a-header"
       >
-        <Typography className={classes.heading}> {messageName}</Typography>
+        <Typography> {messageName}</Typography>
       </AccordionSummary>
       <AccordionDetails id="Details">
         <div id="Conversation">

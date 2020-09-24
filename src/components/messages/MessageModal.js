@@ -1,11 +1,13 @@
+// React
 import React, { useState } from 'react';
-
+// Proptypes
 import PropTypes from 'prop-types';
+// Keeping this here becasue I copied the staright from material ui
 import { makeStyles } from '@material-ui/core/styles';
+// Message From Components
 import MessageForm from './MessageForm';
-import Modal from '@material-ui/core/Modal';
-import Button from '@material-ui/core/Button';
-import Backdrop from '@material-ui/core/Backdrop';
+import { Modal, Button, Backdrop } from '@material-ui/core';
+// Copied staright from Maaterial UI
 import { useSpring, animated } from 'react-spring/web.cjs'; // web.cjs is required for IE 11 support
 
 const useStyles = makeStyles((theme) => ({
