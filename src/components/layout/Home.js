@@ -1,18 +1,21 @@
+// React
 import React from 'react';
+// Redux
 import { useSelector } from 'react-redux';
+// React Router DOM
 import { Redirect, useHistory, Link } from 'react-router-dom';
+// Home Cards
 import HomeCards from './HomeCards';
 import HomeMission from './HomeMission';
 import HomeFooter from './HomeFooter';
 // @material-ui/core components
 import Button from '@material-ui/core/Button';
 import Search from '../forms/Search';
-
+// Home CSS
 import '../../assets/css/Home.css';
 
 const Home = () => {
   let history = useHistory();
-
   const auth = useSelector((store) => store.auth);
   const { isAuth } = auth;
 

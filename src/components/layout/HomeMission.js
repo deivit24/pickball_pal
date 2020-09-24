@@ -1,6 +1,8 @@
+// React
 import React from 'react';
+// Imported IMG
 import img from '../../assets/img/pickleball.jpg';
-
+// Home CSS
 import '../../assets/css/HomeMission.css';
 
 const HomeMission = () => {

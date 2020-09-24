@@ -1,14 +1,22 @@
+// React
 import React from 'react';
+// Redux
 import { useSelector, useDispatch } from 'react-redux';
+/**
+ * For displaying that I can yuse a different
+ * method to style a component I am going to leave
+ * this here
+ */
 import { makeStyles } from '@material-ui/core/styles';
+// Remove alert action
 import { removeAlert } from '../../_actions/alert';
-
+// Alert Component
 import Alert from '@material-ui/lab/Alert';
 
 const useStyles = makeStyles((theme) => ({
   root: {
     position: 'fixed',
-    bottom: '5%',
+    bottom: '15%',
     left: '5%',
     width: 'auto',
     zIndex: '50',
@@ -18,9 +26,8 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function AlertMsg() {
+const AlertMsg = () => {
   const classes = useStyles();
-
   const alerts = useSelector((st) => st.alert);
   const dispatch = useDispatch();
 
@@ -45,4 +52,6 @@ export default function AlertMsg() {
   }
 
   return <div className={classes.root}>{alertMessage}</div>;
-}
+};
+
+export default AlertMsg;

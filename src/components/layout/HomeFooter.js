@@ -1,4 +1,6 @@
+// React
 import React from 'react';
+// HomeFooter CSS
 import '../../assets/css/HomeFooter.css';
 
 const HomeFooter = () => {

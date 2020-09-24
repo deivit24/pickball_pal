@@ -1,12 +1,16 @@
+// React
 import React from 'react';
-
+// React Router DOM
 import { Link } from 'react-router-dom';
-
 // @material-ui/core components
-import Button from '@material-ui/core/Button';
-import Grid from '@material-ui/core/Grid';
-import Paper from '@material-ui/core/Paper';
+/**
+ * I tried using a the Material UI Grid System
+ * Still ended using Bootstrap along with it
+ */
+import { Button, Grid, Paper } from '@material-ui/core';
+//Home CSS
 import '../../assets/css/HomeCards.css';
+// Importing Photos
 import earth from '../../assets/img/earth.jpg';
 import person from '../../assets/img/person.jpg';
 import message from '../../assets/img/message.jpg';
