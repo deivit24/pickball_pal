@@ -16,7 +16,7 @@ import Alert from '@material-ui/lab/Alert';
 const useStyles = makeStyles((theme) => ({
   root: {
     position: 'fixed',
-    bottom: '15%',
+    bottom: '5%',
     left: '5%',
     width: 'auto',
     zIndex: '50',

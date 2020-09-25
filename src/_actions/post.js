@@ -90,6 +90,9 @@ export const addPost = (formData) => async (dispatch) => {
     });
     dispatch(setAlert('Post Created', 'success'));
   } catch (e) {
+    const errors = e.response.data.msg;
+    errors.forEach((error) => dispatch(setAlert(error.msg, 'error')));
+
     dispatch({
       type: POST_ERROR,
       payload: { msg: e.response.statusText, status: e.response.status },
@@ -143,6 +146,9 @@ export const addComment = (postId, formData) => async (dispatch) => {
     });
     dispatch(setAlert('Comment added', 'success'));
   } catch (e) {
+    const errors = e.response.data.msg;
+    errors.forEach((error) => dispatch(setAlert(error.msg, 'error')));
+
     dispatch({
       type: POST_ERROR,
       payload: { msg: e.response.statusText, status: e.response.status },

@@ -29,8 +29,7 @@ const ProfileBody = ({
   const capFirst = (str) => {
     return str.charAt(0).toUpperCase() + str.slice(1);
   };
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const handleSubmit = () => {
     dispatch(newConversation(id));
   };
   let messageMe = false;
