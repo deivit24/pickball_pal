@@ -1,5 +1,8 @@
+// React
 import React from 'react';
+// React Router DOM
 import { Route, Redirect } from 'react-router-dom';
+// Redux
 import { useSelector } from 'react-redux';
 
 const PrivateRoute = ({ exact, path, children }) => {

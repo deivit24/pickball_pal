@@ -1,13 +1,22 @@
+// React
 import React, { useEffect } from 'react';
+// React Router DOM
 import { useLocation } from 'react-router-dom';
-import Navbar from './components/navbar/Navbar';
+// Redux
 import { useDispatch } from 'react-redux';
+// Navbar and HeaderLink Components
+import Navbar from './components/navbar/Navbar';
 import HeaderLinks from './components/navbar/HeaderLinks';
+// App CSS
 import './App.css';
 import logo from './assets/img/logo.png';
+// Alert Message Components
 import AlertMsg from './components/layout/AlertMsg';
+// Routes
 import Routes from './routes/Routes';
+// Load User Action
 import { loadUser } from './_actions/auth';
+// Set Auth Token
 import setAuthToken from './_helpers/setAuthToken';
 
 if (localStorage.token) {

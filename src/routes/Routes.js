@@ -1,5 +1,8 @@
+// React
 import React from 'react';
+// React Route DOM
 import { Switch, Route } from 'react-router-dom';
+// Components for Routes
 import Login from '../components/auth/Login';
 import Register from '../components/auth/Register';
 import Dashboard from '../components/dashboard/Dashboard';
@@ -14,6 +17,7 @@ import UploadPhoto from '../components/forms/UploadPhoto';
 import AddPlaces from '../components/forms/AddPlaces';
 import Posts from '../components/posts/Posts';
 import Post from '../components/post/Post';
+
 const Routes = () => {
   return (
     <Switch>
