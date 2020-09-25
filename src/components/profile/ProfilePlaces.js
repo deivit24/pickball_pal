@@ -1,10 +1,13 @@
+// React
 import React, { useState } from 'react';
+// Google API
 import {
   GoogleMap,
   useLoadScript,
   Marker,
   InfoWindow,
 } from '@react-google-maps/api';
+// Profile Places CSS
 import '../../assets/css/ProfilePlaces.css';
 //GOOGLE MAPS SET UP
 const GOOGLE_API = process.env.REACT_APP_GOOGLE_API;

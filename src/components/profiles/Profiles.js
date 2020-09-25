@@ -1,10 +1,18 @@
+// React
 import React, { useEffect } from 'react';
-import Loading from '../layout/Loading';
-import Search from '../forms/Search';
-import ProfileCard from './ProfileCard';
-import { getProfiles } from '../../_actions/profile';
+// Redux
 import { useSelector, useDispatch } from 'react-redux';
+// Loading
+import Loading from '../layout/Loading';
+// Search Component
+import Search from '../forms/Search';
+// Get Profiles Action
+import { getProfiles } from '../../_actions/profile';
+// Profile Card Component
+import ProfileCard from './ProfileCard';
+// Profile CSS
 import '../../assets/css/Profiles.css';
+
 const Profiles = () => {
   const dispatch = useDispatch();
   const profile = useSelector((state) => state.profile);

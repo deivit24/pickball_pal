@@ -1,14 +1,19 @@
+// React
 import React from 'react';
-
+// React Router DOM
 import { Link } from 'react-router-dom';
+/**
+ * Going to use this way to import style to practise
+ */
 import { makeStyles } from '@material-ui/core/styles';
-import Card from '@material-ui/core/Card';
-import CardContent from '@material-ui/core/CardContent';
-import CardMedia from '@material-ui/core/CardMedia';
-import Typography from '@material-ui/core/Typography';
-import Button from '@material-ui/core/Button';
+import {
+  Card,
+  CardContent,
+  CardMedia,
+  Typography,
+  Button,
+} from '@material-ui/core';
 
-// Geocode.setApiKey('AIzaSyAYLnN6UdQi_ANCsGsHFckvZrPC-kA9lUY');
 const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',

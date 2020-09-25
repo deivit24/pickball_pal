@@ -1,10 +1,16 @@
-import React, { useEffect } from 'react';
+// React
+import React from 'react';
+// Redux
 import { useSelector, useDispatch } from 'react-redux';
+// React Router DOM
 import { useParams } from 'react-router-dom';
+// Message Modal Component
 import MessageModal from '../messages/MessageModal';
+// Profile Body CSS
 import '../../assets/css/ProfileBody.css';
-
+// New Conversation Action
 import { newConversation } from '../../_actions/profile';
+
 const ProfileBody = ({
   avatar,
   first_name,
@@ -20,10 +26,11 @@ const ProfileBody = ({
   const { user } = auth;
   const dispatch = useDispatch();
 
-  function capFirst(str) {
+  const capFirst = (str) => {
     return str.charAt(0).toUpperCase() + str.slice(1);
-  }
-  const handleSubmit = () => {
+  };
+  const handleSubmit = (e) => {
+    e.preventDefault();
     dispatch(newConversation(id));
   };
   let messageMe = false;
@@ -66,15 +73,6 @@ const ProfileBody = ({
             id={id}
             handleSubmit={handleSubmit}
           />
-          {/* <Button
-            className={`mx-auto ${display}`}
-            variant="contained"
-            color="primary"
-            disabled={messageMe}
-            onClick={handleSubmit}
-          >
-            Message Me
-          </Button> */}
         </div>
       </div>
       <div id="ProfileInfo" className="container">

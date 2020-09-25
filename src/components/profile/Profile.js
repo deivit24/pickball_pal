@@ -1,9 +1,16 @@
+// React
 import React, { useEffect } from 'react';
+// Redux
 import { useSelector, useDispatch } from 'react-redux';
-import Loading from '../layout/Loading';
-import Button from '@material-ui/core/Button';
+// React Router DOM
 import { useParams, Link } from 'react-router-dom';
+// Loading Component
+import Loading from '../layout/Loading';
+// Material UI
+import Button from '@material-ui/core/Button';
+// Get Profile by ID Action
 import { getProfileById } from '../../_actions/profile';
+// Profile Components
 import ProfileTop from './ProfileTop';
 import ProfileBody from './ProfileBody';
 import ProfilePlaces from './ProfilePlaces';

@@ -1,4 +1,6 @@
+// React
 import React from 'react';
+// Profile Top
 import '../../assets/css/ProfileTop.css';
 
 const ProfileTop = ({ social }) => {
