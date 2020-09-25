@@ -1,9 +1,14 @@
+// React
 import React, { useState } from 'react';
+// Redux
 import { useDispatch } from 'react-redux';
+// Add Comment Action
 import { addComment } from '../../_actions/post';
-import '../../assets/css/CommentForm.css';
+// Material UI Components
 import Input from '@material-ui/core/Input';
 import Button from '@material-ui/core/Button';
+// Comment Form CSS
+import '../../assets/css/CommentForm.css';
 
 const CommentForm = ({ postId, color }) => {
   const dispatch = useDispatch();
@@ -35,7 +40,7 @@ const CommentForm = ({ postId, color }) => {
           size="small"
           color="primary"
         >
-          Post
+          Comment
         </Button>
       </form>
     </div>

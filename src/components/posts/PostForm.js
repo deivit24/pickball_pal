@@ -1,9 +1,14 @@
+// React
 import React, { useState } from 'react';
+// Redux
 import { useDispatch } from 'react-redux';
+// Add Post Action
 import { addPost } from '../../_actions/post';
-import Input from '@material-ui/core/Input';
-import Button from '@material-ui/core/Button';
+
+import { Input, Button } from '@material-ui/core';
+// Post Form
 import '../../assets/css/PostForm.css';
+
 const PostForm = () => {
   const dispatch = useDispatch();
   const [text, setText] = useState('');

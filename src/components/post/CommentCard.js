@@ -1,9 +1,14 @@
+// React
 import React from 'react';
+// Redux
 import { useSelector, useDispatch } from 'react-redux';
-import { Avatar, Grid, Paper, Button, Icon } from '@material-ui/core';
-import Moment from 'react-moment';
-import { deleteComment } from '../../_actions/post';
+// React Router Dom
 import { Link } from 'react-router-dom';
+import { Avatar, Grid, Paper, Button, Icon } from '@material-ui/core';
+// Moment
+import Moment from 'react-moment';
+// Delete Comment Action
+import { deleteComment } from '../../_actions/post';
 
 const CommentCard = ({
   postId,
@@ -16,9 +21,11 @@ const CommentCard = ({
   return (
     <Paper style={{ padding: '20px', marginBottom: '10px' }}>
       <Grid container wrap="nowrap" spacing={2}>
-        <Grid item>
-          <Avatar alt="avatar" src={avatar} />
-        </Grid>
+        <Link to={`/profile/${user}`}>
+          <Grid item>
+            <Avatar alt="avatar" src={avatar} />
+          </Grid>
+        </Link>
         <Grid justifycontent="left" item xs zeroMinWidth>
           <h4 style={{ margin: 0, textAlign: 'left' }}>
             {first_name} {last_name}

@@ -1,10 +1,17 @@
+// React
 import React, { useEffect } from 'react';
+// Redux
 import { useSelector, useDispatch } from 'react-redux';
+// Get Posts Action
 import { getPosts } from '../../_actions/post';
+// Search Component
 import Search from '../forms/Search';
+// Loading Component
 import Loading from '../layout/Loading';
+// Post Components
 import PostCard from './PostCard';
 import PostForm from './PostForm';
+// Posts CSS
 import '../../assets/css/Posts.css';
 
 const Posts = () => {

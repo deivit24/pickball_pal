@@ -1,11 +1,18 @@
+// React
 import React, { useEffect } from 'react';
+// Redux
 import { useSelector, useDispatch } from 'react-redux';
-import { useParams, Link } from 'react-router-dom';
+// React Router DOM
+import { useParams } from 'react-router-dom';
+// Loading
 import Loading from '../layout/Loading';
-import { getPost } from '../../_actions/post';
+// Get Post Action
+import { getPost } from '../../_actions/post'; // Post Card Component
 import PostCard from '../posts/PostCard';
+// Comment Components
 import CommentForm from './CommentForm';
 import CommentCard from './CommentCard';
+// Post CSS
 import '../../assets/css/Post.css';
 const Post = () => {
   const { id } = useParams();

@@ -1,13 +1,17 @@
+// React
 import React, { useEffect } from 'react';
+// Redux
 import { useSelector, useDispatch } from 'react-redux';
-import { addLike, removeLike, deletePost } from '../../_actions/post';
-import CommentForm from '../post/CommentForm';
-// import { getProfileById } from '../../_actions/profile';
+// React Router DOM
 import { Link } from 'react-router-dom';
+// Actions from Redux
+import { addLike, removeLike, deletePost } from '../../_actions/post';
+// Comment Form Component
+import CommentForm from '../post/CommentForm';
+// Moment
 import Moment from 'react-moment';
-import Icon from '@material-ui/core/Icon';
-import Badge from '@material-ui/core/Badge';
-import Button from '@material-ui/core/Button';
+import { Icon, Badge, Button } from '@material-ui/core';
+// Post Card CSS
 import '../../assets/css/PostCard.css';
 
 const PostCard = ({
@@ -33,9 +37,7 @@ const PostCard = ({
     ' ' +
     last_name.charAt(0).toUpperCase() +
     last_name.slice(1);
-  // function capFirst(str) {
-  //   return str.charAt(0).toUpperCase() + str.slice(1);
-  // }
+
   const auth = useSelector((store) => store.auth);
 
   return (
