@@ -53,7 +53,7 @@ const App = () => {
         rightLinks={<HeaderLinks />}
         fixed
         changeColorOnScroll={{
-          height: 100,
+          height: 50,
           color: 'white',
         }}
       />
