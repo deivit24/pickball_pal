@@ -46,11 +46,9 @@ const PostCard = ({
         <div className=" post-card-box">
           <div className="panel-heading">
             <Link to={`/profile/${user}`}>
-              <img
-                className="[ img-circle pull-left ]"
-                src={avatar}
-                alt="Mouse0270"
-              />
+              <div className="panel-img">
+                <img className="img centered" src={avatar} alt="Mouse0270" />
+              </div>
             </Link>
             <Link to={`/profile/${user}`}>
               <h3>{name}</h3>

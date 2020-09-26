@@ -1,69 +1,74 @@
-.post-card-box {
+#PostCard .post-card-box {
   position: relative;
   border-radius: 10px;
   box-shadow: 0 0 4px 3px #afafaf;
   padding: 10px 20px;
 }
 
-.post-card-box .panel-footer span:hover {
+#PostCard .post-card-box .panel-footer span:hover {
   cursor: pointer;
 }
-.post-card-box .panel-footer span:active {
+#PostCard .post-card-box .panel-footer span:active {
   color: green;
 }
-.post-card-box .panel-heading {
+#PostCard .post-card-box .panel-heading {
   margin-top: 20px;
   padding-bottom: 5px;
   display: flex;
 }
-.post-card-box .panel-heading img {
-  margin-right: 15px;
-  width: 80px;
-  border-radius: 50%;
-}
-.post-card-box .panel-heading h3 {
-  margin: 15px 0 0 0;
 
+#PostCard .post-card-box .panel-heading .panel-img {
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+  height: 80px;
+  width: 80px;
+  margin-right: 10px;
+}
+#PostCard .post-card-box .panel-heading .panel-img .img {
+  position: absolute;
+  height: 100px;
+  width: 100px;
+  max-width: 100%;
+}
+#PostCard .post-card-box .panel-heading .panel-img .centered {
+  position: absolute;
+  bottom: 50%;
+  transform: translateY(50%);
+}
+
+#PostCard .post-card-box .panel-heading h3 {
+  margin: 15px 0 0 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   font-weight: 700;
 }
-.post-card-box .panel-heading p {
+#PostCard .post-card-box .panel-heading p {
   margin: 0px;
   height: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-
   color: rgb(153, 153, 153);
 }
-.post-card-box .panel-heading h5 {
+#PostCard .post-card-box .panel-heading h5 {
   color: rgb(153, 153, 153);
   margin: 0px;
   height: 80px;
-  font-size: 15px;
+  font-size: 14px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   font-weight: 700;
   margin-left: auto;
 }
-.post-card-box .panel-body {
+#PostCard .post-card-box .panel-body {
   padding-top: 10px;
   font-size: 1.2rem;
 }
-.post-card-box .panel-body .post-card-box-image {
-  display: block;
-  text-align: center;
-  background-color: rgb(245, 245, 245);
-  border: 1px solid rgb(217, 217, 217);
-}
-.post-card-box .panel-body .post-card-box-image img {
-  max-width: 100%;
-}
 
-.post-card-box .panel-footer {
+#PostCard .post-card-box .panel-footer {
   font-size: 14px;
   font-weight: 700;
   min-height: 54px;
@@ -71,77 +76,28 @@
   justify-content: center;
   align-items: center;
 }
-.post-card-box .panel-footer .btn {
-  float: left;
-  margin-right: 8px;
-}
-.post-card-box .panel-footer .input-placeholder {
-  width: 90%;
-  margin-left: auto;
-  color: rgb(153, 153, 153);
-  font-size: 12px;
-  font-weight: 400;
-  padding: 8px 6px 7px;
-  border: 1px solid rgb(217, 217, 217);
-  border-radius: 2px;
-  box-shadow: rgba(0, 0, 0, 0.0470588) 0px 1px 0px 0px;
-}
-.post-card-box.post-card-box-show-comment .panel-footer .input-placeholder {
-  display: none;
-}
-.post-card-box .post-card-box-comment {
-  display: none;
-  padding: 10px 20px 15px;
-  border-top: 1px solid rgb(229, 229, 229);
-  background-color: rgb(245, 245, 245);
-}
-.post-card-box.post-card-box-show-comment .post-card-box-comment {
-  display: block;
-}
+
 /*.post-card-box .post-card-box-comment img {
   float: left;   
 }*/
-.post-card-box .post-card-box-comment .post-card-box-textarea {
-  float: right;
-  width: calc(100% - 56px);
-}
-.post-card-box .post-card-box-comment .post-card-box-textarea textarea {
-  display: block;
-  /*margin-left: 60px;
-  width: calc(100% - 56px);*/
-  width: 100%;
-  background-color: rgb(255, 255, 255);
-  border: 1px solid rgb(217, 217, 217);
-  box-shadow: rgba(0, 0, 0, 0.0470588) 0px 1px 0px 0px;
-  resize: vertical;
-}
-.post-card-box .post-card-box-comment .post-card-box-textarea .btn {
-  margin-top: 10px;
-  margin-right: 8px;
-  width: 100%;
-}
 
 #DeleteButton {
   position: absolute;
   top: 10px;
   right: 0;
 }
-@media (min-width: 992px) {
-  .post-card-box .post-card-box-comment .post-card-box-textarea .btn {
-    width: auto;
-  }
-}
 
-.post-card-box .btn {
-  border-radius: 3px;
-}
-.post-card-box .btn-default {
-  border: 1px solid rgb(217, 217, 217);
-  box-shadow: rgba(0, 0, 0, 0.0470588) 0px 1px 0px 0px;
-}
-.post-card-box .btn-default:hover,
-.post-card-box .btn-default:focus,
-.post-card-box .btn-default:active {
-  background-color: rgb(255, 255, 255);
-  border-color: rgb(0, 0, 0);
+@media only screen and (max-width: 600px) {
+  #PostCard .post-card-box .panel-heading h5 {
+    font-size: 12px;
+
+    font-weight: 400;
+  }
+  #PostCard .post-card-box .panel-heading h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+  }
+  #PostCard .post-card-box .panel-heading p {
+    font-size: 0.8rem;
+  }
 }

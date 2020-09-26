@@ -58,7 +58,6 @@ const UploadPhoto = () => {
                 label="Name"
                 name="image"
                 id="upload-photo"
-                fullWidth
                 margin="normal"
                 variant="outlined"
                 onChange={handleChange}

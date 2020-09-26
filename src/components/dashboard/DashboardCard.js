@@ -10,13 +10,14 @@ const DashboardCard = ({ name, avatar }) => {
     <>
       <Card id="DashboardCard" variant="outlined">
         <CardMedia
-          className="img"
+          className="img centered"
           component="img"
           alt="Avatar Image"
           height="100%"
           image={avatar}
           title="Avatar Image"
         />
+
         <CardContent className="card-content">
           <h3 className="text-center mb-3">{name}</h3>
         </CardContent>

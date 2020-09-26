@@ -3,14 +3,14 @@
   border: none;
   box-shadow: 0 0 4px 2px #afafaf;
   border-radius: 10px;
-  padding-top: 20px;
+
   margin-bottom: 20px;
 }
 
 #DashboardCard .img {
-  width: 75%;
+  width: 100%;
   margin: 0px auto -60px auto;
-  border-radius: 50%;
+
   z-index: 50;
 }
 

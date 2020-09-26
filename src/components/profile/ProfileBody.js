@@ -44,7 +44,9 @@ const ProfileBody = ({
   return (
     <>
       <div id="ProfileBody" className="container text-center">
-        <img src={avatar} className="mx-auto mb-3" alt="" />
+        <div className="profile-img">
+          <img src={avatar} className=" mb-3 img centered" alt="" />
+        </div>
         <h3>{name}</h3>
         {active ? (
           <p>

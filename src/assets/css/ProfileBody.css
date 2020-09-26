@@ -1,16 +1,38 @@
 #ProfileBody {
-  margin-top: -100px;
+  margin-top: -150px;
   background: white;
   width: 340px;
-  padding-bottom: 25px;
+  padding: 25px 0px;
   border-radius: 25px;
   box-shadow: 0 0 8px 3px #afafaf;
 }
 
-#ProfileBody img {
+/* #ProfileBody img {
   border-radius: 50%;
   margin-top: -100px;
+  object-fit: cover;
   width: 100%;
+} */
+
+#ProfileBody .profile-img {
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+  height: 300px;
+  width: 300px;
+  margin: 0px auto;
+}
+
+#ProfileBody .profile-img .img {
+  position: absolute;
+  height: 340px;
+  width: 340px;
+}
+#ProfileBody .profile-img .centered {
+  position: absolute;
+  bottom: 50%;
+  left: 0%;
+  transform: translateY(50%);
 }
 
 #ProfileBody p {
