@@ -1,8 +1,13 @@
+#Details {
+  padding: 0;
+  display: inline;
+  position: relative;
+}
 #Details .message-form {
   padding: 15px;
 }
 #Conversation .conversation-box {
-  height: 500px;
+  max-height: 500px;
 
   bottom: 0;
   margin-bottom: 20px;
