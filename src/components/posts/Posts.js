@@ -20,6 +20,7 @@ const Posts = () => {
   const { posts, loading } = post;
   useEffect(() => {
     dispatch(getPosts());
+    document.title = `Community Posts | Pickleball Pal`;
   }, [dispatch]);
 
   const handleSearch = (search) => {

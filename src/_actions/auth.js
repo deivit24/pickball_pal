@@ -91,6 +91,7 @@ export const login = (email, password) => async (dispatch) => {
     dispatch(loadUser());
     dispatch(setAlert('Welcome back!', 'success'));
   } catch (e) {
+    console.log(e);
     const errors = e.response.data.msg;
 
     if (typeof errors === 'string') {

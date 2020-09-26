@@ -24,7 +24,8 @@ const Dashboard = () => {
   useEffect(() => {
     dispatch(getCurrentProfile());
     dispatch(getMessages());
-  }, [dispatch]);
+    document.title = ` ${user && user.first_name}'s Dashboard`;
+  }, [dispatch, user]);
 
   let result;
 

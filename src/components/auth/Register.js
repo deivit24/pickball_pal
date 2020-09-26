@@ -1,5 +1,5 @@
 // React
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 // React Router Dom
 import { Redirect, Link } from 'react-router-dom';
 // Redux
@@ -34,6 +34,9 @@ const Register = () => {
   const dispatch = useDispatch();
   const [values, setValues] = useState(INIT_STATE);
 
+  useEffect(() => {
+    document.title = `Register | Pickleball Pal`;
+  }, []);
   const {
     first_name,
     last_name,

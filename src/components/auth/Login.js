@@ -1,5 +1,5 @@
 // React
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 // React Router Dom
 import { Redirect, Link } from 'react-router-dom';
 // Redux
@@ -33,6 +33,10 @@ const Login = () => {
   const dispatch = useDispatch();
   const [values, setValues] = useState(INIT_STATE);
   const { email, password } = values;
+
+  useEffect(() => {
+    document.title = `Login | Pickleball Pal`;
+  }, []);
   const handleChange = (e) => {
     const { name, value } = e.target;
     setValues((l) => ({ ...l, [name]: value }));

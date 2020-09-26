@@ -1,5 +1,5 @@
 // React
-import React from 'react';
+import React, { useEffect } from 'react';
 // Redux
 import { useSelector } from 'react-redux';
 // React Router DOM
@@ -19,6 +19,9 @@ const Home = () => {
   const auth = useSelector((store) => store.auth);
   const { isAuth } = auth;
 
+  useEffect(() => {
+    document.title = `Welcome to Pickleball Pal`;
+  }, []);
   if (isAuth) {
     return <Redirect to="/dashboard" />;
   }

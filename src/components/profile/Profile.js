@@ -25,7 +25,12 @@ const Profile = () => {
   useEffect(() => {
     dispatch(getProfileById(id));
   }, [dispatch, id]);
-  console.log(id);
+
+  useEffect(() => {
+    document.title = ` ${
+      profile && profile.user.first_name + ' ' + profile.user.last_name
+    }'s Profile`;
+  }, [profile]);
   return (
     <>
       {profile === null || loading ? (

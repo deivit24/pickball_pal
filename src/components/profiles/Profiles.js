@@ -20,6 +20,7 @@ const Profiles = () => {
 
   useEffect(() => {
     dispatch(getProfiles());
+    document.title = `Players | Pickleball Pal`;
   }, [dispatch]);
 
   const handleSearch = (search) => {
