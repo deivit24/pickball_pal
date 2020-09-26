@@ -1,0 +1,139 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing the AddPlaces matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="container"
+    id="AddPlaces"
+  >
+    <div
+      class="form-box"
+    >
+      <div
+        class="form-title"
+      >
+        <h2>
+          Add Place
+        </h2>
+      </div>
+      <form
+        autocomplete="on"
+        novalidate=""
+      >
+        <div
+          class="row"
+        >
+          <div
+            class="col-12"
+          >
+            <div
+              class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+            >
+              <label
+                class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
+                data-shrink="false"
+                for="outlined-full-width"
+                id="outlined-full-width-label"
+              >
+                Name
+              </label>
+              <div
+                class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
+              >
+                <input
+                  aria-describedby="outlined-full-width-helper-text"
+                  aria-invalid="false"
+                  class="MuiInputBase-input MuiOutlinedInput-input"
+                  id="outlined-full-width"
+                  name="name"
+                  type="text"
+                  value=""
+                />
+                <fieldset
+                  aria-hidden="true"
+                  class="PrivateNotchedOutline-root-5 MuiOutlinedInput-notchedOutline"
+                >
+                  <legend
+                    class="PrivateNotchedOutline-legendLabelled-7"
+                  >
+                    <span>
+                      Name
+                    </span>
+                  </legend>
+                </fieldset>
+              </div>
+              <p
+                class="MuiFormHelperText-root MuiFormHelperText-contained"
+                id="outlined-full-width-helper-text"
+              >
+                Name of your location (eg. Westlake HS)
+              </p>
+            </div>
+          </div>
+          <div
+            class="col-12"
+          >
+            <div
+              class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+            >
+              <label
+                class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
+                data-shrink="false"
+                for="outlined-full-width"
+                id="outlined-full-width-label"
+              >
+                Location
+              </label>
+              <div
+                class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
+              >
+                <input
+                  aria-describedby="outlined-full-width-helper-text"
+                  aria-invalid="false"
+                  class="MuiInputBase-input MuiOutlinedInput-input"
+                  id="outlined-full-width"
+                  name="location"
+                  type="text"
+                  value=""
+                />
+                <fieldset
+                  aria-hidden="true"
+                  class="PrivateNotchedOutline-root-5 MuiOutlinedInput-notchedOutline"
+                >
+                  <legend
+                    class="PrivateNotchedOutline-legendLabelled-7"
+                  >
+                    <span>
+                      Location
+                    </span>
+                  </legend>
+                </fieldset>
+              </div>
+              <p
+                class="MuiFormHelperText-root MuiFormHelperText-contained"
+                id="outlined-full-width-helper-text"
+              >
+                Location (eg. Westlake High School, Austin, TX)
+              </p>
+            </div>
+          </div>
+          <button
+            class="MuiButtonBase-root MuiButton-root MuiButton-contained submit-button MuiButton-containedPrimary"
+            tabindex="0"
+            type="button"
+          >
+            <span
+              class="MuiButton-label"
+            >
+              Submit
+            </span>
+            <span
+              class="MuiTouchRipple-root"
+            />
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</DocumentFragment>
+`;

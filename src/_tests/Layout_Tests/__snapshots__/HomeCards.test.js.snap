@@ -1,0 +1,90 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing the HomeCards matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="container"
+    id="HomeCards"
+  >
+    <h1>
+      Perks of signing up
+    </h1>
+    <div
+      class="MuiGrid-root grid MuiGrid-container MuiGrid-spacing-xs-3"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-12 MuiGrid-grid-md-4"
+      >
+        <div
+          class="MuiPaper-root paper MuiPaper-elevation1 MuiPaper-rounded"
+        >
+          <img
+            alt=""
+            src="person.jpg"
+          />
+          <h4>
+            Create a Profile
+          </h4>
+          <p>
+            You can create and edit a profile that other players can find. You can display your bio, playing style level, social media accounts, and where you play.
+          </p>
+        </div>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-12 MuiGrid-grid-md-4"
+      >
+        <div
+          class="MuiPaper-root paper MuiPaper-elevation1 MuiPaper-rounded"
+        >
+          <img
+            alt=""
+            src="message.jpg"
+          />
+          <h4>
+            Direct Message Players
+          </h4>
+          <p>
+            You can send other players direct messages and directly set up your own match or practice schedule with the player. We take no payment for connecting players. 
+          </p>
+        </div>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-12 MuiGrid-grid-md-4"
+      >
+        <div
+          class="MuiPaper-root paper MuiPaper-elevation1 MuiPaper-rounded"
+        >
+          <img
+            alt=""
+            src="earth.jpg"
+          />
+          <h4>
+            Post to the Community
+          </h4>
+          <p>
+            You can post to the Pickleball community and filter posts by location. That way your post doesn't get lost in the world. Comment and like other posts as well. 
+          </p>
+        </div>
+      </div>
+    </div>
+    <a
+      href="/register"
+    >
+      <button
+        class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-containedSizeLarge MuiButton-sizeLarge"
+        tabindex="0"
+        type="button"
+      >
+        <span
+          class="MuiButton-label"
+        >
+          Create Profile
+        </span>
+        <span
+          class="MuiTouchRipple-root"
+        />
+      </button>
+    </a>
+  </div>
+</DocumentFragment>
+`;

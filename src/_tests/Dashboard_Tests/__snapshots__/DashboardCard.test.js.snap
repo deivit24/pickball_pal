@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing the DashboardCard matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="MuiPaper-root MuiCard-root MuiPaper-outlined MuiPaper-rounded"
+    id="DashboardCard"
+  >
+    <img
+      alt="Avatar Image"
+      class="MuiCardMedia-root img MuiCardMedia-media MuiCardMedia-img"
+      height="100%"
+      src="https://icon-library.com/images/default-user-icon/default-user-icon-4.jpg"
+      title="Avatar Image"
+    />
+    <div
+      class="MuiCardContent-root card-content"
+    >
+      <h3
+        class="text-center mb-3"
+      >
+        Test Test
+      </h3>
+    </div>
+  </div>
+</DocumentFragment>
+`;

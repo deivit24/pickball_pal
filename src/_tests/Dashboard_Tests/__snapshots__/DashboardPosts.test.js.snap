@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing the DashboardPosts matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="container mt-5"
+    id="DashboardPosts"
+  >
+    <h4>
+      You haven't posted anything yet
+    </h4>
+  </div>
+</DocumentFragment>
+`;

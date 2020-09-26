@@ -1,0 +1,182 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing the DashboardNav matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="makeStyles-root-7"
+  >
+    <header
+      class="MuiPaper-root MuiAppBar-root MuiAppBar-positionStatic MuiAppBar-colorTransparent MuiPaper-elevation4"
+    >
+      <div
+        class="MuiTabs-root"
+      >
+        <div
+          class="MuiTabs-scrollable"
+          style="width: 99px; height: 99px; position: absolute; top: -9999px; overflow: scroll;"
+        />
+        <div
+          class="MuiTabs-scroller MuiTabs-scrollable"
+          style="margin-bottom: 0px;"
+        >
+          <div
+            aria-label="full width tabs example"
+            class="MuiTabs-flexContainer"
+            role="tablist"
+          >
+            <button
+              aria-controls="full-width-tabpanel-0"
+              aria-selected="true"
+              class="MuiButtonBase-root MuiTab-root MuiTab-textColorPrimary Mui-selected"
+              id="full-width-tab-0"
+              role="tab"
+              tabindex="0"
+              type="button"
+            >
+              <span
+                class="MuiTab-wrapper"
+              >
+                Bio
+              </span>
+              <span
+                class="MuiTouchRipple-root"
+              />
+            </button>
+            <button
+              aria-controls="full-width-tabpanel-1"
+              aria-selected="false"
+              class="MuiButtonBase-root MuiTab-root MuiTab-textColorPrimary"
+              id="full-width-tab-1"
+              role="tab"
+              tabindex="-1"
+              type="button"
+            >
+              <span
+                class="MuiTab-wrapper"
+              >
+                Places
+              </span>
+              <span
+                class="MuiTouchRipple-root"
+              />
+            </button>
+            <button
+              aria-controls="full-width-tabpanel-2"
+              aria-selected="false"
+              class="MuiButtonBase-root MuiTab-root MuiTab-textColorPrimary"
+              id="full-width-tab-2"
+              role="tab"
+              tabindex="-1"
+              type="button"
+            >
+              <span
+                class="MuiTab-wrapper"
+              >
+                Messages
+              </span>
+              <span
+                class="MuiTouchRipple-root"
+              />
+            </button>
+            <button
+              aria-controls="full-width-tabpanel-3"
+              aria-selected="false"
+              class="MuiButtonBase-root MuiTab-root MuiTab-textColorPrimary"
+              id="full-width-tab-3"
+              role="tab"
+              tabindex="-1"
+              type="button"
+            >
+              <span
+                class="MuiTab-wrapper"
+              >
+                Manage Posts
+              </span>
+              <span
+                class="MuiTouchRipple-root"
+              />
+            </button>
+          </div>
+          <span
+            class="PrivateTabIndicator-root-8 PrivateTabIndicator-colorPrimary-9 MuiTabs-indicator"
+            style="left: 0px; width: 0px;"
+          />
+        </div>
+      </div>
+    </header>
+    <div
+      aria-labelledby="full-width-tab-0"
+      class="MuiTypography-root MuiTypography-body1"
+      id="full-width-tabpanel-0"
+      role="tabpanel"
+    >
+      <div
+        class="MuiBox-root MuiBox-root-12"
+      >
+        <div
+          class="container Loading"
+        >
+          <div
+            style="fill: #3f50b5; height: 100px; width: 100px;"
+          >
+            <svg
+              viewBox="0 0 32 32"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              
+  
+              <path
+                d="M16 0 A16 16 0 0 0 16 32 A16 16 0 0 0 16 0 M16 4 A12 12 0 0 1 16 28 A12 12 0 0 1 16 4"
+                opacity=".25"
+              />
+              
+  
+              <path
+                d="M16 0 A16 16 0 0 1 32 16 L28 16 A12 12 0 0 0 16 4z"
+              >
+                
+    
+                <animatetransform
+                  attributeName="transform"
+                  dur="0.8s"
+                  from="0 16 16"
+                  repeatCount="indefinite"
+                  to="360 16 16"
+                  type="rotate"
+                />
+                
+  
+              </path>
+              
+
+            </svg>
+            
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      aria-labelledby="full-width-tab-1"
+      class="MuiTypography-root MuiTypography-body1"
+      hidden=""
+      id="full-width-tabpanel-1"
+      role="tabpanel"
+    />
+    <div
+      aria-labelledby="full-width-tab-2"
+      class="MuiTypography-root MuiTypography-body1"
+      hidden=""
+      id="full-width-tabpanel-2"
+      role="tabpanel"
+    />
+    <div
+      aria-labelledby="full-width-tab-3"
+      class="MuiTypography-root MuiTypography-body1"
+      hidden=""
+      id="full-width-tabpanel-3"
+      role="tabpanel"
+    />
+  </div>
+</DocumentFragment>
+`;

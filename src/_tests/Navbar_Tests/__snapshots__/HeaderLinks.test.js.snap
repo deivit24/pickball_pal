@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing the HeaderLinks matches snapshot 1`] = `
+<DocumentFragment>
+  <ul
+    class="MuiList-root makeStyles-list-35 MuiList-padding"
+  >
+    <li
+      class="MuiListItem-root makeStyles-listItem-36 MuiListItem-gutters"
+    >
+      <a
+        href="/profiles"
+      >
+        <button
+          class="MuiButtonBase-root MuiButton-root MuiButton-text makeStyles-button-47 makeStyles-transparent-61 makeStyles-navLink-38"
+          tabindex="0"
+          type="button"
+        >
+          <span
+            class="MuiButton-label"
+          >
+            <i
+              class="fas fa-users"
+            />
+             Players
+          </span>
+          <span
+            class="MuiTouchRipple-root"
+          />
+        </button>
+      </a>
+    </li>
+  </ul>
+</DocumentFragment>
+`;

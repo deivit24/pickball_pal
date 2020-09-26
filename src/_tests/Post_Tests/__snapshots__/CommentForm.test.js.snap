@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing the CommentForm matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    id="CommentForm"
+  >
+    <form
+      action=""
+      autocomplete="off"
+      novalidate=""
+    >
+      <div
+        class="MuiInputBase-root MuiInput-root MuiInput-underline mr-2 white MuiInputBase-multiline MuiInput-multiline"
+      >
+        <textarea
+          class="MuiInputBase-input MuiInput-input MuiInputBase-inputMultiline MuiInput-inputMultiline"
+          name="text"
+          placeholder="comment"
+          rows="1"
+          style="height: 0px; overflow: hidden;"
+        />
+        <textarea
+          aria-hidden="true"
+          class="MuiInputBase-input MuiInput-input MuiInputBase-inputMultiline MuiInput-inputMultiline"
+          readonly=""
+          style="visibility: hidden; position: absolute; overflow: hidden; height: 0px; top: 0px; left: 0px; transform: translateZ(0); width: 100%;"
+          tabindex="-1"
+        />
+      </div>
+      <button
+        class="MuiButtonBase-root MuiButton-root MuiButton-contained ml-2 MuiButton-containedPrimary MuiButton-containedSizeSmall MuiButton-sizeSmall"
+        tabindex="0"
+        type="button"
+      >
+        <span
+          class="MuiButton-label"
+        >
+          Comment
+        </span>
+        <span
+          class="MuiTouchRipple-root"
+        />
+      </button>
+    </form>
+  </div>
+</DocumentFragment>
+`;

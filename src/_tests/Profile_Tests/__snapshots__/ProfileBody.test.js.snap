@@ -1,0 +1,85 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing the ProfileBody matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="container text-center"
+    id="ProfileBody"
+  >
+    <img
+      alt=""
+      class="mx-auto mb-3"
+      src="https://icon-library.com/images/default-user-icon/default-user-icon-4.jpg"
+    />
+    <h3>
+      David Salazar
+    </h3>
+    <p>
+       
+      <i
+        class="fas fa-globe-americas active"
+      />
+       Looking to play
+    </p>
+    <div
+      class="row"
+    >
+      <div
+        class="col-6"
+      >
+        <p>
+          Male
+        </p>
+      </div>
+      <div
+        class="col-6"
+      >
+        <p>
+          Level: 3
+        </p>
+      </div>
+      <button
+        class="MuiButtonBase-root MuiButton-root MuiButton-contained mx-auto undefined MuiButton-containedPrimary Mui-disabled Mui-disabled"
+        disabled=""
+        tabindex="-1"
+        type="button"
+      >
+        <span
+          class="MuiButton-label"
+        >
+          Message Me
+        </span>
+      </button>
+    </div>
+  </div>
+  <div
+    class="container"
+    id="ProfileInfo"
+  >
+    <div
+      class="row mt-3"
+    >
+      <div
+        class="col-12 mb-3"
+      >
+        <h4>
+          About Me
+        </h4>
+        <p
+          class="bio mb-3"
+        >
+          this is a shiowrt bio
+        </p>
+        <h4>
+          Playing Style
+        </h4>
+        <p
+          class="bio mb-3"
+        >
+          i play hard
+        </p>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

@@ -1,0 +1,60 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing the Navbar matches snapshot 1`] = `
+<DocumentFragment>
+  <header
+    class="MuiPaper-root MuiAppBar-root MuiAppBar-positionFixed MuiAppBar-colorPrimary makeStyles-appBar-67 makeStyles-white-82 mui-fixed MuiPaper-elevation4"
+  >
+    <div
+      class="MuiToolbar-root MuiToolbar-regular makeStyles-container-70 MuiToolbar-gutters"
+    >
+      <div
+        class="makeStyles-flex-71"
+      >
+        <a
+          href="/"
+        >
+          <img
+            alt=""
+            id="Logo"
+            src="logo.png"
+          />
+        </a>
+      </div>
+      <div
+        class="PrivateHiddenCss-smDown-89"
+      >
+        <ul
+          class="MuiList-root makeStyles-list-99 MuiList-padding"
+        >
+          <li
+            class="MuiListItem-root makeStyles-listItem-100 MuiListItem-gutters"
+          >
+            <a
+              href="/profiles"
+            >
+              <button
+                class="MuiButtonBase-root MuiButton-root MuiButton-text makeStyles-button-111 makeStyles-transparent-125 makeStyles-navLink-102"
+                tabindex="0"
+                type="button"
+              >
+                <span
+                  class="MuiButton-label"
+                >
+                  <i
+                    class="fas fa-users"
+                  />
+                   Players
+                </span>
+                <span
+                  class="MuiTouchRipple-root"
+                />
+              </button>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </header>
+</DocumentFragment>
+`;

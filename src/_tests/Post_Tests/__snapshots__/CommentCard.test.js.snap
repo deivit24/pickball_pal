@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing the CommentCard matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="MuiPaper-root MuiPaper-elevation1 MuiPaper-rounded"
+    style="padding: 20px; margin-bottom: 10px;"
+  >
+    <div
+      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 MuiGrid-wrap-xs-nowrap"
+    >
+      <a
+        href="/profile/00003"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-item"
+        >
+          <div
+            class="MuiAvatar-root MuiAvatar-circle"
+          >
+            <img
+              alt="avatar"
+              class="MuiAvatar-img"
+              src="https://icon-library.com/images/default-user-icon/default-user-icon-4.jpg"
+            />
+          </div>
+        </div>
+      </a>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-zeroMinWidth MuiGrid-grid-xs-true"
+        justifycontent="left"
+      >
+        <h4
+          style="margin: 0px; text-align: left;"
+        >
+          david salazar
+        </h4>
+        <p
+          style="text-align: left;"
+        >
+          hey this is a comment
+        </p>
+        <div
+          class="row"
+        >
+          <p
+            style="text-align: left; color: gray;"
+          >
+            Posted 
+            <time
+              datetime="1601072230177"
+            >
+              a few seconds ago
+            </time>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

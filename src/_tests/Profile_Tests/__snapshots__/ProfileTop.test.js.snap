@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing the ProfileTop matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="container-fluid px-0"
+    id="ProfileTop"
+  >
+    <div
+      class="socials"
+    >
+      <a
+        href="facebook.com"
+        target="a_blank"
+      >
+         
+        <i
+          class="fab fa-facebook fa-2x"
+        />
+      </a>
+      <a
+        href="instagram.com"
+        target="a_blank"
+      >
+         
+        <i
+          class="fab fa-instagram fa-2x"
+        />
+      </a>
+      <a
+        href="linkedin.com"
+        target="a_blank"
+      >
+         
+        <i
+          class="fab fa-linkedin fa-2x"
+        />
+      </a>
+    </div>
+  </div>
+</DocumentFragment>
+`;

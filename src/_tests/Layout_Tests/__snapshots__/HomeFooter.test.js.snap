@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing the HomeFooter matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    id="HomeFooter"
+  >
+    <div
+      class="container"
+    >
+      <h1>
+        Created by 
+        <a
+          href="https://deivitsalazar.com"
+          target="a_blank"
+        >
+           David Salazar
+        </a>
+      </h1>
+    </div>
+  </div>
+</DocumentFragment>
+`;

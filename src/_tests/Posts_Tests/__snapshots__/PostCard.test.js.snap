@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing the PostCard matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="row mb-3"
+    id="PostCard"
+  >
+    <div
+      class="col-12 col-sm-offset-1 "
+    >
+      <div
+        class=" post-card-box"
+      >
+        <div
+          class="panel-heading"
+        >
+          <a
+            href="/profile/00003"
+          >
+            <img
+              alt="Mouse0270"
+              class="[ img-circle pull-left ]"
+              src="https://icon-library.com/images/default-user-icon/default-user-icon-4.jpg"
+            />
+          </a>
+          <a
+            href="/profile/00003"
+          >
+            <h3>
+              David Salazar
+            </h3>
+            <p>
+              Austin, TX 78745
+            </p>
+          </a>
+          <h5>
+            Posted
+            <time
+              datetime="1601072880285"
+            >
+              a few seconds ago
+            </time>
+          </h5>
+        </div>
+        <div
+          class="panel-body"
+        >
+          <p>
+            hey this is a comment
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

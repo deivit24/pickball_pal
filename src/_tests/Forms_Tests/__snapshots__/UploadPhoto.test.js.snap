@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing the UploadPhoto matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="container"
+    id="UploadPhoto"
+  >
+    <div
+      class="form-box"
+    >
+      <div
+        class="form-title"
+      >
+        <h2>
+          Upload Photo
+        </h2>
+      </div>
+      <form
+        autocomplete="on"
+        enctype="multipart/form-data"
+        novalidate=""
+      >
+        <div
+          class="row"
+        >
+          <div
+            class="col-12"
+          >
+            <input
+              accept="image/*"
+              id="upload-photo"
+              label="Name"
+              margin="normal"
+              name="image"
+              type="file"
+              variant="outlined"
+            />
+          </div>
+          <label
+            for="upload-photo"
+          >
+            <button
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained submit-button MuiButton-containedPrimary Mui-disabled Mui-disabled"
+              disabled=""
+              tabindex="-1"
+              type="button"
+            >
+              <span
+                class="MuiButton-label"
+              >
+                Upload
+              </span>
+            </button>
+          </label>
+        </div>
+      </form>
+    </div>
+  </div>
+</DocumentFragment>
+`;

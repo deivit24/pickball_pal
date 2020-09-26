@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing the MessageForm matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    id="MessageForm"
+  >
+    <form
+      action=""
+      autocomplete="off"
+      novalidate=""
+    >
+      <div
+        class="MuiInputBase-root MuiInput-root MuiInput-underline mr-2 MuiInputBase-fullWidth MuiInput-fullWidth MuiInputBase-multiline MuiInput-multiline"
+      >
+        <textarea
+          class="MuiInputBase-input MuiInput-input MuiInputBase-inputMultiline MuiInput-inputMultiline"
+          id="outlined-multiline-flexible"
+          name="message"
+          placeholder="message"
+          rows="4"
+        />
+      </div>
+      <br />
+      <button
+        class="MuiButtonBase-root MuiButton-root MuiButton-contained mt-3  MuiButton-containedPrimary MuiButton-containedSizeSmall MuiButton-sizeSmall"
+        tabindex="0"
+        type="button"
+      >
+        <span
+          class="MuiButton-label"
+        >
+          Send
+        </span>
+        <span
+          class="MuiTouchRipple-root"
+        />
+      </button>
+    </form>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Testing the MessageModal matches snapshot 1`] = `
+<DocumentFragment>
+  <button
+    class="MuiButtonBase-root MuiButton-root MuiButton-contained mx-auto  MuiButton-containedPrimary"
+    tabindex="0"
+    type="button"
+  >
+    <span
+      class="MuiButton-label"
+    >
+      Message Me
+    </span>
+    <span
+      class="MuiTouchRipple-root"
+    />
+  </button>
+</DocumentFragment>
+`;

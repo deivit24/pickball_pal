@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing the PostForm matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    id="PostForm"
+  >
+    <form
+      action=""
+      autocomplete="off"
+      novalidate=""
+    >
+      <div
+        class="MuiInputBase-root MuiInput-root MuiInput-underline mr-2 MuiInputBase-multiline MuiInput-multiline"
+        label="New Post"
+        variant="filled"
+      >
+        <textarea
+          class="MuiInputBase-input MuiInput-input MuiInputBase-inputMultiline MuiInput-inputMultiline"
+          id="outlined-multiline-flexible"
+          name="text"
+          placeholder="New Post"
+          rows="1"
+          style="height: 0px; overflow: hidden;"
+        />
+        <textarea
+          aria-hidden="true"
+          class="MuiInputBase-input MuiInput-input MuiInputBase-inputMultiline MuiInput-inputMultiline"
+          readonly=""
+          style="visibility: hidden; position: absolute; overflow: hidden; height: 0px; top: 0px; left: 0px; transform: translateZ(0); width: 100%;"
+          tabindex="-1"
+        />
+      </div>
+      <button
+        class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-containedSizeSmall MuiButton-sizeSmall"
+        tabindex="0"
+        type="button"
+      >
+        <span
+          class="MuiButton-label"
+        >
+          Post
+        </span>
+        <span
+          class="MuiTouchRipple-root"
+        />
+      </button>
+    </form>
+  </div>
+</DocumentFragment>
+`;
