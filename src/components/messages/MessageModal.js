@@ -1,13 +1,20 @@
 // React
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 // Proptypes
 import PropTypes from 'prop-types';
 // Keeping this here becasue I copied the staright from material ui
 import { makeStyles } from '@material-ui/core/styles';
 // Message From Components
 import MessageForm from './MessageForm';
-import { Modal, Button, Backdrop } from '@material-ui/core';
-// Copied staright from Maaterial UI
+import {
+  Modal,
+  Button,
+  Backdrop,
+  Typography,
+  Popover,
+} from '@material-ui/core';
+// Modal copied staright from from Material UI
 import { useSpring, animated } from 'react-spring/web.cjs'; // web.cjs is required for IE 11 support
 
 const useStyles = makeStyles((theme) => ({
@@ -21,6 +28,17 @@ const useStyles = makeStyles((theme) => ({
     border: '1px solid #fff',
     boxShadow: theme.shadows[5],
     padding: theme.spacing(2, 4, 3),
+  },
+  typography: {
+    backgroundColor: '#f5f5f9',
+    color: 'rgba(0, 0, 0, 0.87)',
+    maxWidth: 360,
+    padding: theme.spacing(3),
+    fontSize: theme.typography.pxToRem(16),
+    border: '1px solid #dadde9',
+  },
+  link: {
+    fontWeight: '700',
   },
 }));
 
@@ -59,6 +77,17 @@ const MessageModal = ({ messageMe, display, name, id, handleSubmit }) => {
   const classes = useStyles();
   const [open, setOpen] = useState(false);
 
+  const [anchorEl, setAnchorEl] = useState(null);
+  const handleClickPopover = (e) => {
+    setAnchorEl(e.currentTarget);
+  };
+
+  const handleClosePopover = () => {
+    setAnchorEl(null);
+  };
+
+  const openPopover = Boolean(anchorEl);
+  const popoverId = openPopover ? 'simple-popover' : undefined;
   const handleOpen = (e) => {
     e.preventDefault();
     handleSubmit();
@@ -68,18 +97,69 @@ const MessageModal = ({ messageMe, display, name, id, handleSubmit }) => {
   const handleClose = () => {
     setOpen(false);
   };
+  let messageButton;
+  if (!messageMe) {
+    messageButton = (
+      <>
+        <Button
+          className={`mx-auto ${display}`}
+          variant="contained"
+          color="primary"
+          onClick={handleOpen}
+        >
+          Message Me
+        </Button>
+      </>
+    );
+  } else {
+    messageButton = (
+      <>
+        <Button
+          aria-describedby={popoverId}
+          onClick={handleClickPopover}
+          className={`mx-auto ${display}`}
+          variant="contained"
+          color="primary"
+        >
+          Message Me
+        </Button>
+        <Popover
+          id={popoverId}
+          open={openPopover}
+          anchorEl={anchorEl}
+          onClose={handleClosePopover}
+          anchorOrigin={{
+            vertical: 'bottom',
+            horizontal: 'center',
+          }}
+          transformOrigin={{
+            vertical: 'top',
+            horizontal: 'center',
+          }}
+        >
+          <Typography className={classes.typography}>
+            <p>
+              You need to{' '}
+              <Link className={classes.link} to="/login">
+                login
+              </Link>{' '}
+              to message me.
+            </p>
+            <p>
+              Don't have an account?{' '}
+              <Link className={classes.link} to="/register">
+                Register Now!
+              </Link>
+            </p>
+          </Typography>
+        </Popover>
+      </>
+    );
+  }
 
   return (
     <>
-      <Button
-        className={`mx-auto ${display}`}
-        variant="contained"
-        color="primary"
-        disabled={messageMe}
-        onClick={handleOpen}
-      >
-        Message Me
-      </Button>
+      {messageButton}
       <Modal
         aria-labelledby="spring-modal-title"
         aria-describedby="spring-modal-description"

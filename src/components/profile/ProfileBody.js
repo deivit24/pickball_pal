@@ -45,9 +45,9 @@ const ProfileBody = ({
     <>
       <div id="ProfileBody" className="container text-center">
         <div className="profile-img">
-          <img src={avatar} className=" mb-3 img centered" alt="" />
+          <img src={avatar} className=" img centered" alt="" />
         </div>
-        <h3>{name}</h3>
+        <h3 className=" mt-3">{name}</h3>
         {active ? (
           <p>
             {' '}
