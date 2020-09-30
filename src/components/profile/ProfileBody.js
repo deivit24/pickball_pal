@@ -45,7 +45,11 @@ const ProfileBody = ({
     <>
       <div id="ProfileBody" className="container text-center">
         <div className="profile-img">
-          <img src={avatar} className=" img centered" alt="" />
+          <div
+            style={{ backgroundImage: `url(${avatar})` }}
+            className="avatar"
+          ></div>
+          {/* <img src={avatar} className=" img centered" alt="" /> */}
         </div>
         <h3 className=" mt-3">{name}</h3>
         {active ? (
